@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<MidiSet xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SoundFonts>
+    <SoundFontInfo>
+      <Name>GeneralUser GS v1.471</Name>
+      <PatchCount>269</PatchCount>
+      <WaveCount>864</WaveCount>
+      <WaveSize>35262462</WaveSize>
+      <SF2Path>C:/Users/jordi/AppData/LocalLow/DefaultCompany/Conductor-VR-app\SoundFont\GeneralUser GS v1.471.sf2</SF2Path>
+    </SoundFontInfo>
+  </SoundFonts>
+  <IndexSelectedSF>0</IndexSelectedSF>
+  <MidiFiles>
+    <string>1 Mozart_Test_8_Tracks</string>
+    <string>2 Mozart_Test_8_Tracks</string>
+    <string>Canon_5_tracks_1_channel</string>
+    <string>just a sound _unfinished_</string>
+    <string>mid</string>
+    <string>Mozart_Test_8_Tracks _2_</string>
+    <string>Overture_15_channel</string>
+    <string>Overture_16_channel_info_track_1 _1_</string>
+    <string>Overture_info_track _4_</string>
+    <string>Rite_of_spring_demo_v2</string>
+    <string>Symphony_10_Shostakovich_16_Channels_A</string>
+    <string>Symphony_10_Shostakovich_16_Channels_B</string>
+    <string>Symphony_10_Shostakovich_32_Channels</string>
+  </MidiFiles>
+</MidiSet>

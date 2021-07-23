@@ -1,0 +1,1050 @@
+Format 1, Tracks 5, Delta Ticks Per Quarter Note 240
+0 TimeSignature 4/4 TicksInClick:24 32ndsInQuarterNote:8
+0 SetTempo 60bpm (1000000)
+4800 TimeSignature 5/4 TicksInClick:24 32ndsInQuarterNote:8
+6000 TimeSignature 4/4 TicksInClick:24 32ndsInQuarterNote:8
+6960 TimeSignature 2/4 TicksInClick:24 32ndsInQuarterNote:8
+7440 TimeSignature 4/4 TicksInClick:24 32ndsInQuarterNote:8
+22800 TimeSignature 2/4 TicksInClick:24 32ndsInQuarterNote:8
+23280 TimeSignature 4/4 TicksInClick:24 32ndsInQuarterNote:8
+24240 TimeSignature 2/4 TicksInClick:24 32ndsInQuarterNote:8
+24720 TimeSignature 4/4 TicksInClick:24 32ndsInQuarterNote:8
+41040 TimeSignature 5/4 TicksInClick:24 32ndsInQuarterNote:8
+42240 TimeSignature 4/4 TicksInClick:24 32ndsInQuarterNote:8
+42240 EndTrack
+0 SequenceTrackName Sopraan
+0 ControlChange Ch: 1 Controller Pan Value 64
+0 ControlChange Ch: 1 Controller 91 Value 32
+0 ControlChange Ch: 1 Controller Pan Value 64
+0 ControlChange Ch: 1 Controller 91 Value 32
+0 ControlChange Ch: 1 Controller Pan Value 64
+0 ControlChange Ch: 1 Controller 91 Value 32
+0 ControlChange Ch: 1 Controller Pan Value 64
+0 ControlChange Ch: 1 Controller 91 Value 32
+0 ControlChange Ch: 1 Controller Pan Value 64
+0 ControlChange Ch: 1 Controller 91 Value 32
+0 ControlChange Ch: 1 Controller Pan Value 64
+0 ControlChange Ch: 1 Controller 91 Value 32
+0 ControlChange Ch: 1 Controller Pan Value 64
+0 ControlChange Ch: 1 Controller 91 Value 32
+0 ControlChange Ch: 1 Controller Pan Value 64
+0 ControlChange Ch: 1 Controller 91 Value 32
+0 NoteOn Ch: 1 F5 Vel:100 Len: 324
+324 NoteOff Ch: 1 F5 Vel:100
+360 NoteOn Ch: 1 F5 Vel:84 Len: 108
+468 NoteOff Ch: 1 F5 Vel:64
+480 NoteOn Ch: 1 F5 Vel:101 Len: 432
+912 NoteOff Ch: 1 F5 Vel:100
+960 NoteOn Ch: 1 A5 Vel:98 Len: 324
+1284 NoteOff Ch: 1 A5 Vel:100
+1320 NoteOn Ch: 1 A5 Vel:84 Len: 108
+1428 NoteOff Ch: 1 A5 Vel:64
+1440 NoteOn Ch: 1 A5 Vel:99 Len: 432
+1872 NoteOff Ch: 1 A5 Vel:100
+1920 NoteOn Ch: 1 C6 Vel:104 Len: 324
+2244 NoteOff Ch: 1 C6 Vel:100
+2280 NoteOn Ch: 1 C6 Vel:101 Len: 108
+2388 NoteOff Ch: 1 C6 Vel:100
+2400 NoteOn Ch: 1 C6 Vel:99 Len: 216
+2616 NoteOff Ch: 1 C6 Vel:100
+2640 NoteOn Ch: 1 D6 Vel:96 Len: 216
+2856 NoteOff Ch: 1 D6 Vel:100
+2880 NoteOn Ch: 1 G5 Vel:102 Len: 216
+3096 NoteOff Ch: 1 G5 Vel:100
+3120 NoteOn Ch: 1 A5 Vel:95 Len: 648
+3768 NoteOff Ch: 1 A5 Vel:100
+3840 NoteOn Ch: 1 F5 Vel:98 Len: 324
+4164 NoteOff Ch: 1 F5 Vel:100
+4200 NoteOn Ch: 1 F5 Vel:100 Len: 108
+4308 NoteOff Ch: 1 F5 Vel:100
+4320 NoteOn Ch: 1 F5 Vel:97 Len: 432
+4752 NoteOff Ch: 1 F5 Vel:100
+4800 NoteOn Ch: 1 D6 Vel:95 Len: 294
+5040 NoteOn Ch: 1 D6 Vel:96 Len: 8454
+5094 NoteOff Ch: 1 D6 Vel:100
+5100 NoteOn Ch: 1 C6 Vel:100 Len: 54
+5154 NoteOff Ch: 1 C6 Vel:100
+5160 NoteOn Ch: 1 A5 Vel:98 Len: 108
+5268 NoteOff Ch: 1 A5 Vel:100
+5280 NoteOn Ch: 1 C6 Vel:103 Len: 432
+5712 NoteOff Ch: 1 C6 Vel:100
+5880 NoteOn Ch: 1 F5 Vel:100 Len: 108
+5988 NoteOff Ch: 1 F5 Vel:100
+6000 NoteOn Ch: 1 F5 Vel:78 Len: 216
+6216 NoteOff Ch: 1 F5 Vel:64
+6240 NoteOn Ch: 1 F5 Vel:75 Len: 216
+6456 NoteOff Ch: 1 F5 Vel:64
+6480 NoteOn Ch: 1 A5 Vel:96 Len: 324
+6804 NoteOff Ch: 1 A5 Vel:100
+6840 NoteOn Ch: 1 A5 Vel:97 Len: 108
+6948 NoteOff Ch: 1 A5 Vel:100
+6960 NoteOn Ch: 1 G5 Vel:100 Len: 216
+7176 NoteOff Ch: 1 G5 Vel:100
+7200 NoteOn Ch: 1 F5 Vel:95 Len: 672
+7872 NoteOff Ch: 1 F5 Vel:100
+12240 NoteOn Ch: 1 F5 Vel:95 Len: 324
+12564 NoteOff Ch: 1 F5 Vel:100
+12600 NoteOn Ch: 1 F5 Vel:104 Len: 108
+12708 NoteOff Ch: 1 F5 Vel:100
+12720 NoteOn Ch: 1 F5 Vel:103 Len: 432
+13152 NoteOff Ch: 1 F5 Vel:100
+13320 NoteOn Ch: 1 D6 Vel:97 Len: 4176
+13494 NoteOff Ch: 1 D6 Vel:100
+13500 NoteOn Ch: 1 C6 Vel:99 Len: 54
+13554 NoteOff Ch: 1 C6 Vel:100
+13560 NoteOn Ch: 1 A5 Vel:102 Len: 108
+13668 NoteOff Ch: 1 A5 Vel:100
+13680 NoteOn Ch: 1 C6 Vel:103 Len: 588
+14268 NoteOff Ch: 1 C6 Vel:100
+14340 NoteOn Ch: 1 F5 Vel:100 Len: 54
+14394 NoteOff Ch: 1 F5 Vel:100
+14400 NoteOn Ch: 1 F5 Vel:101 Len: 108
+14508 NoteOff Ch: 1 F5 Vel:100
+14520 NoteOn Ch: 1 F5 Vel:97 Len: 108
+14628 NoteOff Ch: 1 F5 Vel:100
+14640 NoteOn Ch: 1 A5 Vel:101 Len: 324
+14964 NoteOff Ch: 1 A5 Vel:100
+15000 NoteOn Ch: 1 A5 Vel:101 Len: 108
+15108 NoteOff Ch: 1 A5 Vel:100
+15120 NoteOn Ch: 1 G5 Vel:102 Len: 216
+15336 NoteOff Ch: 1 G5 Vel:100
+15360 NoteOn Ch: 1 F5 Vel:104 Len: 1368
+16080 NoteOn Ch: 1 F5 Vel:100 Len: 648
+16728 NoteOff Ch: 1 F5 Vel:100
+16728 NoteOff Ch: 1 F5 Vel:100
+17280 NoteOn Ch: 1 D6 Vel:98 Len: 564
+17496 NoteOff Ch: 1 D6 Vel:100
+17520 NoteOn Ch: 1 D6 Vel:103 Len: 696
+17844 NoteOff Ch: 1 D6 Vel:100
+17880 NoteOn Ch: 1 C6 Vel:102 Len: 108
+17988 NoteOff Ch: 1 C6 Vel:100
+18000 NoteOn Ch: 1 D6 Vel:102 Len: 3948
+18216 NoteOff Ch: 1 D6 Vel:100
+18240 NoteOn Ch: 1 C6 Vel:104 Len: 432
+18672 NoteOff Ch: 1 C6 Vel:100
+18840 NoteOn Ch: 1 A5 Vel:103 Len: 108
+18948 NoteOff Ch: 1 A5 Vel:100
+18960 NoteOn Ch: 1 C6 Vel:96 Len: 324
+19284 NoteOff Ch: 1 C6 Vel:100
+19320 NoteOn Ch: 1 A5 Vel:96 Len: 108
+19428 NoteOff Ch: 1 A5 Vel:100
+19440 NoteOn Ch: 1 C6 Vel:95 Len: 324
+19764 NoteOff Ch: 1 C6 Vel:100
+19800 NoteOn Ch: 1 A5 Vel:104 Len: 108
+19908 NoteOff Ch: 1 A5 Vel:100
+19920 NoteOn Ch: 1 C6 Vel:99 Len: 216
+20136 NoteOff Ch: 1 C6 Vel:100
+20160 NoteOn Ch: 1 A5 Vel:97 Len: 432
+20592 NoteOff Ch: 1 A5 Vel:100
+20760 NoteOn Ch: 1 F5 Vel:101 Len: 108
+20868 NoteOff Ch: 1 F5 Vel:100
+20880 NoteOn Ch: 1 A5 Vel:96 Len: 114
+20994 NoteOff Ch: 1 A5 Vel:100
+21000 NoteOn Ch: 1 C6 Vel:98 Len: 216
+21216 NoteOff Ch: 1 C6 Vel:100
+21240 NoteOn Ch: 1 C6 Vel:102 Len: 444
+21684 NoteOff Ch: 1 C6 Vel:100
+21720 NoteOn Ch: 1 C6 Vel:104 Len: 108
+21828 NoteOff Ch: 1 C6 Vel:100
+21840 NoteOn Ch: 1 D6 Vel:96 Len: 8934
+21948 NoteOff Ch: 1 D6 Vel:100
+21960 NoteOn Ch: 1 C6 Vel:101 Len: 108
+22068 NoteOff Ch: 1 C6 Vel:100
+22080 NoteOn Ch: 1 A5 Vel:96 Len: 108
+22188 NoteOff Ch: 1 A5 Vel:100
+22200 NoteOn Ch: 1 C6 Vel:99 Len: 816
+23016 NoteOff Ch: 1 C6 Vel:100
+23160 NoteOn Ch: 1 F5 Vel:102 Len: 108
+23268 NoteOff Ch: 1 F5 Vel:100
+23280 NoteOn Ch: 1 F5 Vel:102 Len: 216
+23496 NoteOff Ch: 1 F5 Vel:100
+23520 NoteOn Ch: 1 F5 Vel:103 Len: 216
+23736 NoteOff Ch: 1 F5 Vel:100
+23760 NoteOn Ch: 1 A5 Vel:101 Len: 342
+24102 NoteOff Ch: 1 A5 Vel:100
+24120 NoteOn Ch: 1 A5 Vel:99 Len: 108
+24228 NoteOff Ch: 1 A5 Vel:100
+24240 NoteOn Ch: 1 G5 Vel:99 Len: 216
+24456 NoteOff Ch: 1 G5 Vel:100
+24480 NoteOn Ch: 1 F5 Vel:101 Len: 672
+25152 NoteOff Ch: 1 F5 Vel:100
+26640 NoteOn Ch: 1 A5 Vel:97 Len: 324
+26964 NoteOff Ch: 1 A5 Vel:100
+27000 NoteOn Ch: 1 A5 Vel:96 Len: 108
+27108 NoteOff Ch: 1 A5 Vel:100
+27120 NoteOn Ch: 1 A5 Vel:97 Len: 1344
+28464 NoteOff Ch: 1 A5 Vel:100
+28680 NoteOn Ch: 1 A#5 Vel:95 Len: 180
+28860 NoteOff Ch: 1 A#5 Vel:100
+28860 NoteOn Ch: 1 A5 Vel:98 Len: 60
+28920 NoteOff Ch: 1 A5 Vel:100
+28920 NoteOn Ch: 1 G5 Vel:104 Len: 120
+29040 NoteOff Ch: 1 G5 Vel:100
+29040 NoteOn Ch: 1 C6 Vel:100 Len: 1344
+30384 NoteOff Ch: 1 C6 Vel:100
+30600 NoteOn Ch: 1 D6 Vel:100 Len: 8496
+30774 NoteOff Ch: 1 D6 Vel:100
+30780 NoteOn Ch: 1 C6 Vel:96 Len: 54
+30834 NoteOff Ch: 1 C6 Vel:100
+30840 NoteOn Ch: 1 A5 Vel:98 Len: 108
+30948 NoteOff Ch: 1 A5 Vel:100
+30960 NoteOn Ch: 1 C6 Vel:96 Len: 588
+31548 NoteOff Ch: 1 C6 Vel:100
+31620 NoteOn Ch: 1 F5 Vel:97 Len: 54
+31674 NoteOff Ch: 1 F5 Vel:100
+31680 NoteOn Ch: 1 F5 Vel:95 Len: 108
+31788 NoteOff Ch: 1 F5 Vel:100
+31800 NoteOn Ch: 1 F5 Vel:97 Len: 108
+31908 NoteOff Ch: 1 F5 Vel:100
+31920 NoteOn Ch: 1 A5 Vel:100 Len: 324
+32244 NoteOff Ch: 1 A5 Vel:100
+32280 NoteOn Ch: 1 A5 Vel:103 Len: 108
+32388 NoteOff Ch: 1 A5 Vel:100
+32400 NoteOn Ch: 1 G5 Vel:98 Len: 216
+32616 NoteOff Ch: 1 G5 Vel:100
+32640 NoteOn Ch: 1 F5 Vel:100 Len: 828
+33468 NoteOff Ch: 1 F5 Vel:100
+33600 NoteOn Ch: 1 F5 Vel:102 Len: 108
+33708 NoteOff Ch: 1 F5 Vel:100
+33720 NoteOn Ch: 1 F5 Vel:95 Len: 108
+33828 NoteOff Ch: 1 F5 Vel:100
+33840 NoteOn Ch: 1 A5 Vel:102 Len: 324
+34164 NoteOff Ch: 1 A5 Vel:100
+34200 NoteOn Ch: 1 A5 Vel:101 Len: 108
+34308 NoteOff Ch: 1 A5 Vel:100
+34320 NoteOn Ch: 1 G5 Vel:95 Len: 216
+34536 NoteOff Ch: 1 G5 Vel:100
+34560 NoteOn Ch: 1 F5 Vel:96 Len: 432
+34992 NoteOff Ch: 1 F5 Vel:100
+36240 NoteOn Ch: 1 F5 Vel:100 Len: 324
+36564 NoteOff Ch: 1 F5 Vel:100
+36600 NoteOn Ch: 1 F5 Vel:100 Len: 108
+36708 NoteOff Ch: 1 F5 Vel:100
+36720 NoteOn Ch: 1 F5 Vel:99 Len: 432
+37152 NoteOff Ch: 1 F5 Vel:100
+37200 NoteOn Ch: 1 A5 Vel:95 Len: 324
+37524 NoteOff Ch: 1 A5 Vel:100
+37560 NoteOn Ch: 1 A5 Vel:101 Len: 108
+37668 NoteOff Ch: 1 A5 Vel:100
+37680 NoteOn Ch: 1 A5 Vel:104 Len: 432
+38112 NoteOff Ch: 1 A5 Vel:100
+38160 NoteOn Ch: 1 C6 Vel:99 Len: 324
+38484 NoteOff Ch: 1 C6 Vel:100
+38520 NoteOn Ch: 1 C6 Vel:95 Len: 108
+38628 NoteOff Ch: 1 C6 Vel:100
+38640 NoteOn Ch: 1 C6 Vel:98 Len: 216
+38856 NoteOff Ch: 1 C6 Vel:100
+38880 NoteOn Ch: 1 D6 Vel:103 Len: 2454
+39096 NoteOff Ch: 1 D6 Vel:100
+39120 NoteOn Ch: 1 G5 Vel:96 Len: 216
+39336 NoteOff Ch: 1 G5 Vel:100
+39360 NoteOn Ch: 1 A5 Vel:104 Len: 648
+40008 NoteOff Ch: 1 A5 Vel:100
+40080 NoteOn Ch: 1 F5 Vel:100 Len: 324
+40404 NoteOff Ch: 1 F5 Vel:100
+40440 NoteOn Ch: 1 F5 Vel:102 Len: 108
+40548 NoteOff Ch: 1 F5 Vel:100
+40560 NoteOn Ch: 1 F5 Vel:96 Len: 432
+40992 NoteOff Ch: 1 F5 Vel:100
+41040 NoteOn Ch: 1 D6 Vel:101 Len: ?
+41334 NoteOff Ch: 1 D6 Vel:100
+41340 NoteOn Ch: 1 C6 Vel:97 Len: 54
+41394 NoteOff Ch: 1 C6 Vel:100
+41400 NoteOn Ch: 1 A5 Vel:100 Len: 108
+41508 NoteOff Ch: 1 A5 Vel:100
+41520 NoteOn Ch: 1 C6 Vel:101 Len: 432
+41952 NoteOff Ch: 1 C6 Vel:100
+42120 NoteOn Ch: 1 F5 Vel:101 Len: 108
+42228 NoteOff Ch: 1 F5 Vel:100
+42240 NoteOn Ch: 1 F5 Vel:83 Len: 216
+42456 NoteOff Ch: 1 F5 Vel:64
+42480 NoteOn Ch: 1 F5 Vel:100 Len: 216
+42696 NoteOff Ch: 1 F5 Vel:100
+42720 NoteOn Ch: 1 A5 Vel:101 Len: 324
+43044 NoteOff Ch: 1 A5 Vel:100
+43080 NoteOn Ch: 1 A5 Vel:100 Len: 108
+43188 NoteOff Ch: 1 A5 Vel:100
+43200 NoteOn Ch: 1 G5 Vel:104 Len: 216
+43416 NoteOff Ch: 1 G5 Vel:100
+43440 NoteOn Ch: 1 F5 Vel:98 Len: 648
+44088 NoteOff Ch: 1 F5 Vel:100
+44088 EndTrack
+0 SequenceTrackName Alt
+0 ControlChange Ch: 2 Controller Pan Value 64
+0 ControlChange Ch: 2 Controller 91 Value 32
+0 ControlChange Ch: 2 Controller Pan Value 64
+0 ControlChange Ch: 2 Controller 91 Value 32
+0 ControlChange Ch: 2 Controller Pan Value 64
+0 ControlChange Ch: 2 Controller 91 Value 32
+0 ControlChange Ch: 2 Controller Pan Value 64
+0 ControlChange Ch: 2 Controller 91 Value 32
+0 ControlChange Ch: 2 Controller Pan Value 64
+0 ControlChange Ch: 2 Controller 91 Value 32
+0 ControlChange Ch: 2 Controller Pan Value 64
+0 ControlChange Ch: 2 Controller 91 Value 32
+0 ControlChange Ch: 2 Controller Pan Value 64
+0 ControlChange Ch: 2 Controller 91 Value 32
+0 ControlChange Ch: 2 Controller Pan Value 64
+0 ControlChange Ch: 2 Controller 91 Value 32
+0 NoteOn Ch: 2 C5 Vel:95 Len: 324
+324 NoteOff Ch: 2 C5 Vel:100
+360 NoteOn Ch: 2 C5 Vel:81 Len: 108
+468 NoteOff Ch: 2 C5 Vel:64
+480 NoteOn Ch: 2 C5 Vel:97 Len: 432
+912 NoteOff Ch: 2 C5 Vel:100
+960 NoteOn Ch: 2 F5 Vel:102 Len: 324
+1284 NoteOff Ch: 2 F5 Vel:100
+1320 NoteOn Ch: 2 F5 Vel:83 Len: 108
+1428 NoteOff Ch: 2 F5 Vel:64
+1440 NoteOn Ch: 2 E5 Vel:97 Len: 432
+1872 NoteOff Ch: 2 E5 Vel:100
+1920 NoteOn Ch: 2 D5 Vel:83 Len: 216
+2136 NoteOff Ch: 2 D5 Vel:64
+2160 NoteOn Ch: 2 E5 Vel:79 Len: 216
+2376 NoteOff Ch: 2 E5 Vel:64
+2400 NoteOn Ch: 2 G5 Vel:80 Len: 216
+2616 NoteOff Ch: 2 G5 Vel:64
+2640 NoteOn Ch: 2 F5 Vel:82 Len: 216
+2856 NoteOff Ch: 2 F5 Vel:64
+2880 NoteOn Ch: 2 F5 Vel:95 Len: 216
+3096 NoteOff Ch: 2 F5 Vel:100
+3120 NoteOn Ch: 2 D5 Vel:82 Len: 216
+3336 NoteOff Ch: 2 D5 Vel:64
+3360 NoteOn Ch: 2 C5 Vel:79 Len: 432
+3792 NoteOff Ch: 2 C5 Vel:64
+3840 NoteOn Ch: 2 D5 Vel:97 Len: 324
+4164 NoteOff Ch: 2 D5 Vel:100
+4200 NoteOn Ch: 2 D5 Vel:99 Len: 108
+4308 NoteOff Ch: 2 D5 Vel:100
+4320 NoteOn Ch: 2 E5 Vel:101 Len: 432
+4752 NoteOff Ch: 2 E5 Vel:100
+4800 NoteOn Ch: 2 D5 Vel:95 Len: 216
+5016 NoteOff Ch: 2 D5 Vel:100
+5094 NoteOff Ch: 2 D5 Vel:100
+5100 NoteOn Ch: 2 E5 Vel:95 Len: 54
+5154 NoteOff Ch: 2 E5 Vel:100
+5160 NoteOn Ch: 2 E5 Vel:97 Len: 108
+5268 NoteOff Ch: 2 E5 Vel:100
+5280 NoteOn Ch: 2 F5 Vel:102 Len: 432
+5712 NoteOff Ch: 2 F5 Vel:100
+5880 NoteOn Ch: 2 F5 Vel:100 Len: 108
+5988 NoteOff Ch: 2 F5 Vel:100
+6000 NoteOn Ch: 2 F5 Vel:98 Len: 216
+6000 NoteOn Ch: 2 E5 Vel:95 Len: 216
+6216 NoteOff Ch: 2 E5 Vel:100
+6216 NoteOff Ch: 2 F5 Vel:100
+6480 NoteOn Ch: 2 D5 Vel:104 Len: 216
+6696 NoteOff Ch: 2 D5 Vel:100
+6720 NoteOn Ch: 2 C5 Vel:102 Len: 216
+6936 NoteOff Ch: 2 C5 Vel:100
+6960 NoteOn Ch: 2 A#4 Vel:97 Len: 216
+7176 NoteOff Ch: 2 A#4 Vel:100
+7200 NoteOn Ch: 2 A4 Vel:102 Len: 672
+7872 NoteOff Ch: 2 A4 Vel:100
+12240 NoteOn Ch: 2 F5 Vel:97 Len: 324
+12564 NoteOff Ch: 2 F5 Vel:100
+12600 NoteOn Ch: 2 F5 Vel:97 Len: 108
+12708 NoteOff Ch: 2 F5 Vel:100
+12720 NoteOn Ch: 2 F5 Vel:100 Len: 432
+13152 NoteOff Ch: 2 F5 Vel:100
+13320 NoteOn Ch: 2 D6 Vel:95 Len: 174
+13494 NoteOff Ch: 2 D6 Vel:100
+13500 NoteOn Ch: 2 C6 Vel:100 Len: 54
+13554 NoteOff Ch: 2 C6 Vel:100
+13560 NoteOn Ch: 2 A5 Vel:98 Len: 108
+13668 NoteOff Ch: 2 A5 Vel:100
+13680 NoteOn Ch: 2 C6 Vel:99 Len: 588
+14268 NoteOff Ch: 2 C6 Vel:100
+14340 NoteOn Ch: 2 F5 Vel:95 Len: 54
+14394 NoteOff Ch: 2 F5 Vel:100
+14400 NoteOn Ch: 2 F5 Vel:99 Len: 108
+14508 NoteOff Ch: 2 F5 Vel:100
+14520 NoteOn Ch: 2 F5 Vel:96 Len: 108
+14628 NoteOff Ch: 2 F5 Vel:100
+14640 NoteOn Ch: 2 A5 Vel:102 Len: 324
+14964 NoteOff Ch: 2 A5 Vel:100
+15000 NoteOn Ch: 2 A5 Vel:98 Len: 108
+15108 NoteOff Ch: 2 A5 Vel:100
+15120 NoteOn Ch: 2 G5 Vel:98 Len: 216
+15336 NoteOff Ch: 2 G5 Vel:100
+15360 NoteOn Ch: 2 F5 Vel:96 Len: 1368
+16080 NoteOn Ch: 2 F5 Vel:98 Len: 648
+16728 NoteOff Ch: 2 F5 Vel:100
+16728 NoteOff Ch: 2 F5 Vel:100
+17280 NoteOn Ch: 2 F5 Vel:98 Len: 216
+17496 NoteOff Ch: 2 F5 Vel:100
+17520 NoteOn Ch: 2 F5 Vel:98 Len: 324
+17844 NoteOff Ch: 2 F5 Vel:100
+17880 NoteOn Ch: 2 F5 Vel:100 Len: 108
+17988 NoteOff Ch: 2 F5 Vel:100
+18000 NoteOn Ch: 2 F5 Vel:101 Len: 216
+18216 NoteOff Ch: 2 F5 Vel:100
+18240 NoteOn Ch: 2 E5 Vel:99 Len: 432
+18672 NoteOff Ch: 2 E5 Vel:100
+18840 NoteOn Ch: 2 E5 Vel:98 Len: 108
+18948 NoteOff Ch: 2 E5 Vel:100
+18960 NoteOn Ch: 2 E5 Vel:97 Len: 324
+19284 NoteOff Ch: 2 E5 Vel:100
+19320 NoteOn Ch: 2 E5 Vel:104 Len: 108
+19428 NoteOff Ch: 2 E5 Vel:100
+19440 NoteOn Ch: 2 D5 Vel:96 Len: 216
+19656 NoteOff Ch: 2 D5 Vel:100
+19680 NoteOn Ch: 2 F5 Vel:98 Len: 216
+19896 NoteOff Ch: 2 F5 Vel:100
+19920 NoteOn Ch: 2 F5 Vel:99 Len: 216
+20136 NoteOff Ch: 2 F5 Vel:100
+20160 NoteOn Ch: 2 F5 Vel:97 Len: 216
+20280 NoteOn Ch: 2 F5 Vel:103 Len: 108
+20376 NoteOff Ch: 2 F5 Vel:100
+20388 NoteOff Ch: 2 F5 Vel:100
+20400 NoteOn Ch: 2 G5 Vel:103 Len: 216
+20616 NoteOff Ch: 2 G5 Vel:100
+20880 NoteOn Ch: 2 A5 Vel:102 Len: 114
+20994 NoteOff Ch: 2 A5 Vel:100
+21000 NoteOn Ch: 2 C6 Vel:99 Len: 216
+21216 NoteOff Ch: 2 C6 Vel:100
+21240 NoteOn Ch: 2 C6 Vel:102 Len: 444
+21684 NoteOff Ch: 2 C6 Vel:100
+21720 NoteOn Ch: 2 C6 Vel:99 Len: 108
+21828 NoteOff Ch: 2 C6 Vel:100
+21840 NoteOn Ch: 2 D6 Vel:96 Len: 108
+21948 NoteOff Ch: 2 D6 Vel:100
+21960 NoteOn Ch: 2 C6 Vel:99 Len: 108
+22068 NoteOff Ch: 2 C6 Vel:100
+22080 NoteOn Ch: 2 A5 Vel:98 Len: 108
+22188 NoteOff Ch: 2 A5 Vel:100
+22200 NoteOn Ch: 2 C6 Vel:99 Len: 816
+23016 NoteOff Ch: 2 C6 Vel:100
+23160 NoteOn Ch: 2 F5 Vel:98 Len: 108
+23268 NoteOff Ch: 2 F5 Vel:100
+23280 NoteOn Ch: 2 F5 Vel:98 Len: 216
+23496 NoteOff Ch: 2 F5 Vel:100
+23520 NoteOn Ch: 2 F5 Vel:95 Len: 216
+23736 NoteOff Ch: 2 F5 Vel:100
+23760 NoteOn Ch: 2 A5 Vel:100 Len: 342
+24102 NoteOff Ch: 2 A5 Vel:100
+24120 NoteOn Ch: 2 A5 Vel:103 Len: 108
+24228 NoteOff Ch: 2 A5 Vel:100
+24240 NoteOn Ch: 2 G5 Vel:102 Len: 216
+24456 NoteOff Ch: 2 G5 Vel:100
+24480 NoteOn Ch: 2 F5 Vel:101 Len: 672
+25152 NoteOff Ch: 2 F5 Vel:100
+26640 NoteOn Ch: 2 A5 Vel:101 Len: 324
+26964 NoteOff Ch: 2 A5 Vel:100
+27000 NoteOn Ch: 2 A5 Vel:104 Len: 108
+27108 NoteOff Ch: 2 A5 Vel:100
+27120 NoteOn Ch: 2 A5 Vel:99 Len: 1344
+28464 NoteOff Ch: 2 A5 Vel:100
+28680 NoteOn Ch: 2 A#5 Vel:101 Len: 180
+28860 NoteOff Ch: 2 A#5 Vel:100
+28860 NoteOn Ch: 2 A5 Vel:102 Len: 60
+28920 NoteOff Ch: 2 A5 Vel:100
+28920 NoteOn Ch: 2 G5 Vel:104 Len: 120
+29040 NoteOff Ch: 2 G5 Vel:100
+29040 NoteOn Ch: 2 C6 Vel:100 Len: 1344
+30384 NoteOff Ch: 2 C6 Vel:100
+30600 NoteOn Ch: 2 D6 Vel:98 Len: 174
+30774 NoteOff Ch: 2 D6 Vel:100
+30780 NoteOn Ch: 2 C6 Vel:96 Len: 54
+30834 NoteOff Ch: 2 C6 Vel:100
+30840 NoteOn Ch: 2 A5 Vel:97 Len: 108
+30948 NoteOff Ch: 2 A5 Vel:100
+30960 NoteOn Ch: 2 C6 Vel:95 Len: 588
+31548 NoteOff Ch: 2 C6 Vel:100
+31620 NoteOn Ch: 2 F5 Vel:98 Len: 54
+31674 NoteOff Ch: 2 F5 Vel:100
+31680 NoteOn Ch: 2 F5 Vel:99 Len: 108
+31788 NoteOff Ch: 2 F5 Vel:100
+31800 NoteOn Ch: 2 F5 Vel:95 Len: 108
+31908 NoteOff Ch: 2 F5 Vel:100
+31920 NoteOn Ch: 2 A5 Vel:99 Len: 324
+32244 NoteOff Ch: 2 A5 Vel:100
+32280 NoteOn Ch: 2 A5 Vel:99 Len: 108
+32388 NoteOff Ch: 2 A5 Vel:100
+32400 NoteOn Ch: 2 G5 Vel:95 Len: 216
+32616 NoteOff Ch: 2 G5 Vel:100
+32640 NoteOn Ch: 2 F5 Vel:102 Len: 828
+33468 NoteOff Ch: 2 F5 Vel:100
+33600 NoteOn Ch: 2 F5 Vel:101 Len: 108
+33708 NoteOff Ch: 2 F5 Vel:100
+33720 NoteOn Ch: 2 F5 Vel:103 Len: 108
+33828 NoteOff Ch: 2 F5 Vel:100
+33840 NoteOn Ch: 2 A5 Vel:99 Len: 324
+34164 NoteOff Ch: 2 A5 Vel:100
+34200 NoteOn Ch: 2 A5 Vel:97 Len: 108
+34308 NoteOff Ch: 2 A5 Vel:100
+34320 NoteOn Ch: 2 G5 Vel:103 Len: 216
+34536 NoteOff Ch: 2 G5 Vel:100
+34560 NoteOn Ch: 2 F5 Vel:102 Len: 432
+34992 NoteOff Ch: 2 F5 Vel:100
+36240 NoteOn Ch: 2 C5 Vel:98 Len: 324
+36564 NoteOff Ch: 2 C5 Vel:100
+36600 NoteOn Ch: 2 C5 Vel:95 Len: 108
+36708 NoteOff Ch: 2 C5 Vel:100
+36720 NoteOn Ch: 2 C5 Vel:95 Len: 432
+37152 NoteOff Ch: 2 C5 Vel:100
+37200 NoteOn Ch: 2 F5 Vel:97 Len: 324
+37524 NoteOff Ch: 2 F5 Vel:100
+37560 NoteOn Ch: 2 F5 Vel:100 Len: 108
+37668 NoteOff Ch: 2 F5 Vel:100
+37680 NoteOn Ch: 2 E5 Vel:99 Len: 432
+37680 NoteOn Ch: 2 A5 Vel:100 Len: 432
+38112 NoteOff Ch: 2 A5 Vel:100
+38112 NoteOff Ch: 2 E5 Vel:100
+38160 NoteOn Ch: 2 D5 Vel:79 Len: 216
+38376 NoteOff Ch: 2 D5 Vel:64
+38400 NoteOn Ch: 2 E5 Vel:84 Len: 216
+38616 NoteOff Ch: 2 E5 Vel:64
+38640 NoteOn Ch: 2 G5 Vel:79 Len: 216
+38856 NoteOff Ch: 2 G5 Vel:64
+38880 NoteOn Ch: 2 F5 Vel:77 Len: 216
+39096 NoteOff Ch: 2 F5 Vel:64
+39360 NoteOn Ch: 2 D5 Vel:100 Len: 216
+39576 NoteOff Ch: 2 D5 Vel:100
+39600 NoteOn Ch: 2 C5 Vel:104 Len: 432
+40032 NoteOff Ch: 2 C5 Vel:100
+40080 NoteOn Ch: 2 D5 Vel:100 Len: 324
+40404 NoteOff Ch: 2 D5 Vel:100
+40440 NoteOn Ch: 2 D5 Vel:101 Len: 108
+40548 NoteOff Ch: 2 D5 Vel:100
+40560 NoteOn Ch: 2 E5 Vel:96 Len: 432
+40992 NoteOff Ch: 2 E5 Vel:100
+41040 NoteOn Ch: 2 D5 Vel:101 Len: 294
+41334 NoteOff Ch: 2 D5 Vel:100
+41340 NoteOn Ch: 2 E5 Vel:103 Len: 54
+41394 NoteOff Ch: 2 E5 Vel:100
+41400 NoteOn Ch: 2 E5 Vel:98 Len: 108
+41508 NoteOff Ch: 2 E5 Vel:100
+41520 NoteOn Ch: 2 F5 Vel:100 Len: 456
+41976 NoteOff Ch: 2 F5 Vel:100
+42120 NoteOn Ch: 2 F5 Vel:100 Len: 108
+42228 NoteOff Ch: 2 F5 Vel:100
+42240 NoteOn Ch: 2 F5 Vel:101 Len: 216
+42240 NoteOn Ch: 2 F5 Vel:104 Len: 216
+42456 NoteOff Ch: 2 F5 Vel:100
+42456 NoteOff Ch: 2 F5 Vel:100
+42480 NoteOn Ch: 2 E5 Vel:96 Len: 216
+42696 NoteOff Ch: 2 E5 Vel:100
+42720 NoteOn Ch: 2 D5 Vel:97 Len: 216
+42936 NoteOff Ch: 2 D5 Vel:100
+42960 NoteOn Ch: 2 C5 Vel:95 Len: 216
+43176 NoteOff Ch: 2 C5 Vel:100
+43200 NoteOn Ch: 2 A#4 Vel:95 Len: 216
+43416 NoteOff Ch: 2 A#4 Vel:100
+43440 NoteOn Ch: 2 A4 Vel:98 Len: 648
+44088 NoteOff Ch: 2 A4 Vel:100
+44088 EndTrack
+0 SequenceTrackName Tenor
+0 ControlChange Ch: 2 Controller Pan Value 64
+0 ControlChange Ch: 2 Controller 91 Value 32
+0 ControlChange Ch: 2 Controller Pan Value 64
+0 ControlChange Ch: 2 Controller 91 Value 32
+0 ControlChange Ch: 2 Controller Pan Value 64
+0 ControlChange Ch: 2 Controller 91 Value 32
+0 ControlChange Ch: 2 Controller Pan Value 64
+0 ControlChange Ch: 2 Controller 91 Value 32
+0 ControlChange Ch: 2 Controller Pan Value 64
+0 ControlChange Ch: 2 Controller 91 Value 32
+0 ControlChange Ch: 2 Controller Pan Value 64
+0 ControlChange Ch: 2 Controller 91 Value 32
+0 ControlChange Ch: 2 Controller Pan Value 64
+0 ControlChange Ch: 2 Controller 91 Value 32
+0 ControlChange Ch: 2 Controller Pan Value 64
+0 ControlChange Ch: 2 Controller 91 Value 32
+0 NoteOn Ch: 2 A4 Vel:96 Len: 324
+324 NoteOff Ch: 2 A4 Vel:100
+360 NoteOn Ch: 2 A4 Vel:96 Len: 108
+468 NoteOff Ch: 2 A4 Vel:100
+480 NoteOn Ch: 2 A4 Vel:81 Len: 432
+912 NoteOff Ch: 2 A4 Vel:64
+960 NoteOn Ch: 2 A4 Vel:95 Len: 324
+1284 NoteOff Ch: 2 A4 Vel:100
+1320 NoteOn Ch: 2 A4 Vel:104 Len: 108
+1428 NoteOff Ch: 2 A4 Vel:100
+1440 NoteOn Ch: 2 A4 Vel:102 Len: 432
+1872 NoteOff Ch: 2 A4 Vel:100
+1920 NoteOn Ch: 2 F4 Vel:103 Len: 216
+2136 NoteOff Ch: 2 F4 Vel:100
+2160 NoteOn Ch: 2 G4 Vel:98 Len: 216
+2376 NoteOff Ch: 2 G4 Vel:100
+2400 NoteOn Ch: 2 F4 Vel:99 Len: 216
+2616 NoteOff Ch: 2 F4 Vel:100
+2640 NoteOn Ch: 2 A4 Vel:100 Len: 216
+2856 NoteOff Ch: 2 A4 Vel:100
+2880 NoteOn Ch: 2 A#4 Vel:99 Len: 216
+3096 NoteOff Ch: 2 A#4 Vel:100
+3120 NoteOn Ch: 2 A#4 Vel:102 Len: 648
+3768 NoteOff Ch: 2 A#4 Vel:100
+3840 NoteOn Ch: 2 A4 Vel:96 Len: 324
+4164 NoteOff Ch: 2 A4 Vel:100
+4200 NoteOn Ch: 2 A4 Vel:97 Len: 108
+4308 NoteOff Ch: 2 A4 Vel:100
+4320 NoteOn Ch: 2 A4 Vel:100 Len: 432
+4320 NoteOn Ch: 2 C4 Vel:98 Len: 432
+4752 NoteOff Ch: 2 C4 Vel:100
+4752 NoteOff Ch: 2 A4 Vel:100
+4800 NoteOn Ch: 2 F4 Vel:102 Len: 216
+5016 NoteOff Ch: 2 F4 Vel:100
+5040 NoteOn Ch: 2 F4 Vel:99 Len: 54
+5094 NoteOff Ch: 2 F4 Vel:100
+5100 NoteOn Ch: 2 A4 Vel:102 Len: 54
+5154 NoteOff Ch: 2 A4 Vel:100
+5160 NoteOn Ch: 2 C5 Vel:99 Len: 108
+5268 NoteOff Ch: 2 C5 Vel:100
+5280 NoteOn Ch: 2 A#4 Vel:95 Len: 432
+5712 NoteOff Ch: 2 A#4 Vel:100
+5880 NoteOn Ch: 2 A#4 Vel:100 Len: 108
+5988 NoteOff Ch: 2 A#4 Vel:100
+6000 NoteOn Ch: 2 A4 Vel:104 Len: 216
+6216 NoteOff Ch: 2 A4 Vel:100
+6240 NoteOn Ch: 2 A4 Vel:99 Len: 216
+6456 NoteOff Ch: 2 A4 Vel:100
+6480 NoteOn Ch: 2 F4 Vel:101 Len: 216
+6696 NoteOff Ch: 2 F4 Vel:100
+6720 NoteOn Ch: 2 F4 Vel:97 Len: 216
+6936 NoteOff Ch: 2 F4 Vel:100
+6960 NoteOn Ch: 2 D4 Vel:97 Len: 216
+7176 NoteOff Ch: 2 D4 Vel:100
+7200 NoteOn Ch: 2 C4 Vel:102 Len: 672
+7872 NoteOff Ch: 2 C4 Vel:100
+8400 NoteOn Ch: 2 F4 Vel:99 Len: 324
+8724 NoteOff Ch: 2 F4 Vel:100
+8760 NoteOn Ch: 2 F4 Vel:97 Len: 108
+8868 NoteOff Ch: 2 F4 Vel:100
+8880 NoteOn Ch: 2 F4 Vel:96 Len: 432
+9312 NoteOff Ch: 2 F4 Vel:100
+9360 NoteOn Ch: 2 A4 Vel:103 Len: 324
+9684 NoteOff Ch: 2 A4 Vel:100
+9720 NoteOn Ch: 2 A4 Vel:99 Len: 108
+9828 NoteOff Ch: 2 A4 Vel:100
+9840 NoteOn Ch: 2 A4 Vel:101 Len: 324
+10164 NoteOff Ch: 2 A4 Vel:100
+10320 NoteOn Ch: 2 C5 Vel:95 Len: 324
+10644 NoteOff Ch: 2 C5 Vel:100
+10680 NoteOn Ch: 2 C5 Vel:98 Len: 108
+10788 NoteOff Ch: 2 C5 Vel:100
+10800 NoteOn Ch: 2 C5 Vel:96 Len: 216
+11016 NoteOff Ch: 2 C5 Vel:100
+11040 NoteOn Ch: 2 D5 Vel:104 Len: 216
+11256 NoteOff Ch: 2 D5 Vel:100
+11280 NoteOn Ch: 2 G4 Vel:104 Len: 216
+11496 NoteOff Ch: 2 G4 Vel:100
+11520 NoteOn Ch: 2 A4 Vel:100 Len: 588
+12108 NoteOff Ch: 2 A4 Vel:100
+15300 NoteOn Ch: 2 F4 Vel:95 Len: 54
+15354 NoteOff Ch: 2 F4 Vel:100
+15360 NoteOn Ch: 2 F4 Vel:100 Len: 108
+15468 NoteOff Ch: 2 F4 Vel:100
+15480 NoteOn Ch: 2 F4 Vel:103 Len: 108
+15588 NoteOff Ch: 2 F4 Vel:100
+15600 NoteOn Ch: 2 A4 Vel:101 Len: 324
+15924 NoteOff Ch: 2 A4 Vel:100
+15960 NoteOn Ch: 2 A4 Vel:99 Len: 108
+16068 NoteOff Ch: 2 A4 Vel:100
+16080 NoteOn Ch: 2 G4 Vel:100 Len: 216
+16296 NoteOff Ch: 2 G4 Vel:100
+16320 NoteOn Ch: 2 F4 Vel:102 Len: 432
+16320 NoteOn Ch: 2 F4 Vel:101 Len: 432
+16752 NoteOff Ch: 2 F4 Vel:100
+16752 NoteOff Ch: 2 F4 Vel:100
+17280 NoteOn Ch: 2 A4 Vel:97 Len: 216
+17496 NoteOff Ch: 2 A4 Vel:100
+17520 NoteOn Ch: 2 A4 Vel:103 Len: 324
+17844 NoteOff Ch: 2 A4 Vel:100
+17880 NoteOn Ch: 2 A4 Vel:101 Len: 108
+17988 NoteOff Ch: 2 A4 Vel:100
+18000 NoteOn Ch: 2 F4 Vel:99 Len: 216
+18216 NoteOff Ch: 2 F4 Vel:100
+18240 NoteOn Ch: 2 A4 Vel:101 Len: 432
+18672 NoteOff Ch: 2 A4 Vel:100
+18840 NoteOn Ch: 2 A4 Vel:103 Len: 108
+18948 NoteOff Ch: 2 A4 Vel:100
+18960 NoteOn Ch: 2 A4 Vel:100 Len: 324
+19284 NoteOff Ch: 2 A4 Vel:100
+19320 NoteOn Ch: 2 A4 Vel:96 Len: 108
+19428 NoteOff Ch: 2 A4 Vel:100
+19440 NoteOn Ch: 2 F4 Vel:96 Len: 216
+19656 NoteOff Ch: 2 F4 Vel:100
+19680 NoteOn Ch: 2 A#4 Vel:98 Len: 216
+19896 NoteOff Ch: 2 A#4 Vel:100
+19920 NoteOn Ch: 2 A4 Vel:101 Len: 216
+20136 NoteOff Ch: 2 A4 Vel:100
+20160 NoteOn Ch: 2 C5 Vel:104 Len: 216
+20376 NoteOff Ch: 2 C5 Vel:100
+20400 NoteOn Ch: 2 D5 Vel:98 Len: 216
+20616 NoteOff Ch: 2 D5 Vel:100
+20760 NoteOn Ch: 2 F4 Vel:99 Len: 108
+20868 NoteOff Ch: 2 F4 Vel:100
+20880 NoteOn Ch: 2 A4 Vel:101 Len: 114
+20994 NoteOff Ch: 2 A4 Vel:100
+21000 NoteOn Ch: 2 C5 Vel:95 Len: 216
+21216 NoteOff Ch: 2 C5 Vel:100
+21240 NoteOn Ch: 2 C5 Vel:97 Len: 444
+21684 NoteOff Ch: 2 C5 Vel:100
+21720 NoteOn Ch: 2 C5 Vel:104 Len: 108
+21828 NoteOff Ch: 2 C5 Vel:100
+21840 NoteOn Ch: 2 D5 Vel:103 Len: 108
+21948 NoteOff Ch: 2 D5 Vel:100
+21960 NoteOn Ch: 2 C5 Vel:97 Len: 108
+22068 NoteOff Ch: 2 C5 Vel:100
+22080 NoteOn Ch: 2 A4 Vel:102 Len: 108
+22188 NoteOff Ch: 2 A4 Vel:100
+22200 NoteOn Ch: 2 C5 Vel:101 Len: 816
+23016 NoteOff Ch: 2 C5 Vel:100
+25680 NoteOn Ch: 2 F4 Vel:97 Len: 324
+26004 NoteOff Ch: 2 F4 Vel:100
+26040 NoteOn Ch: 2 F4 Vel:100 Len: 108
+26148 NoteOff Ch: 2 F4 Vel:100
+26160 NoteOn Ch: 2 F4 Vel:102 Len: 1284
+27444 NoteOff Ch: 2 F4 Vel:100
+27600 NoteOn Ch: 2 C5 Vel:102 Len: 324
+27924 NoteOff Ch: 2 C5 Vel:100
+27960 NoteOn Ch: 2 C5 Vel:104 Len: 108
+28068 NoteOff Ch: 2 C5 Vel:100
+28080 NoteOn Ch: 2 C5 Vel:96 Len: 216
+28296 NoteOff Ch: 2 C5 Vel:100
+28320 NoteOn Ch: 2 D5 Vel:95 Len: 216
+28536 NoteOff Ch: 2 D5 Vel:100
+28560 NoteOn Ch: 2 G4 Vel:103 Len: 216
+28776 NoteOff Ch: 2 G4 Vel:100
+28800 NoteOn Ch: 2 A4 Vel:101 Len: 588
+29388 NoteOff Ch: 2 A4 Vel:100
+29520 NoteOn Ch: 2 F4 Vel:99 Len: 324
+29844 NoteOff Ch: 2 F4 Vel:100
+29880 NoteOn Ch: 2 F4 Vel:102 Len: 108
+29988 NoteOff Ch: 2 F4 Vel:100
+30000 NoteOn Ch: 2 F4 Vel:95 Len: 432
+30432 NoteOff Ch: 2 F4 Vel:100
+30600 NoteOn Ch: 2 D5 Vel:104 Len: 174
+30774 NoteOff Ch: 2 D5 Vel:100
+30780 NoteOn Ch: 2 C5 Vel:103 Len: 54
+30834 NoteOff Ch: 2 C5 Vel:100
+30840 NoteOn Ch: 2 A4 Vel:103 Len: 108
+30948 NoteOff Ch: 2 A4 Vel:100
+30960 NoteOn Ch: 2 C5 Vel:102 Len: 1344
+32304 NoteOff Ch: 2 C5 Vel:100
+32580 NoteOn Ch: 2 F4 Vel:101 Len: 54
+32634 NoteOff Ch: 2 F4 Vel:100
+32640 NoteOn Ch: 2 F4 Vel:102 Len: 108
+32748 NoteOff Ch: 2 F4 Vel:100
+32760 NoteOn Ch: 2 F4 Vel:101 Len: 108
+32868 NoteOff Ch: 2 F4 Vel:100
+32880 NoteOn Ch: 2 A4 Vel:102 Len: 324
+33204 NoteOff Ch: 2 A4 Vel:100
+33240 NoteOn Ch: 2 A4 Vel:99 Len: 108
+33348 NoteOff Ch: 2 A4 Vel:100
+33360 NoteOn Ch: 2 G4 Vel:98 Len: 216
+33576 NoteOff Ch: 2 G4 Vel:100
+33600 NoteOn Ch: 2 F4 Vel:102 Len: 1368
+34968 NoteOff Ch: 2 F4 Vel:100
+36240 NoteOn Ch: 2 A4 Vel:102 Len: 324
+36564 NoteOff Ch: 2 A4 Vel:100
+36600 NoteOn Ch: 2 A4 Vel:97 Len: 108
+36708 NoteOff Ch: 2 A4 Vel:100
+36720 NoteOn Ch: 2 A4 Vel:101 Len: 432
+37152 NoteOff Ch: 2 A4 Vel:100
+37200 NoteOn Ch: 2 A4 Vel:103 Len: 324
+37524 NoteOff Ch: 2 A4 Vel:100
+37560 NoteOn Ch: 2 A4 Vel:99 Len: 108
+37668 NoteOff Ch: 2 A4 Vel:100
+37680 NoteOn Ch: 2 A4 Vel:103 Len: 432
+38112 NoteOff Ch: 2 A4 Vel:100
+38160 NoteOn Ch: 2 F4 Vel:104 Len: 216
+38376 NoteOff Ch: 2 F4 Vel:100
+38400 NoteOn Ch: 2 G4 Vel:99 Len: 216
+38616 NoteOff Ch: 2 G4 Vel:100
+38640 NoteOn Ch: 2 F4 Vel:103 Len: 216
+38856 NoteOff Ch: 2 F4 Vel:100
+38880 NoteOn Ch: 2 A4 Vel:100 Len: 216
+39096 NoteOff Ch: 2 A4 Vel:100
+39120 NoteOn Ch: 2 A#4 Vel:102 Len: 216
+39336 NoteOff Ch: 2 A#4 Vel:100
+39360 NoteOn Ch: 2 A#4 Vel:104 Len: 648
+40008 NoteOff Ch: 2 A#4 Vel:100
+40080 NoteOn Ch: 2 A4 Vel:102 Len: 324
+40404 NoteOff Ch: 2 A4 Vel:100
+40440 NoteOn Ch: 2 A4 Vel:100 Len: 108
+40548 NoteOff Ch: 2 A4 Vel:100
+40560 NoteOn Ch: 2 A4 Vel:100 Len: 432
+40992 NoteOff Ch: 2 A4 Vel:100
+41040 NoteOn Ch: 2 F4 Vel:95 Len: 294
+41334 NoteOff Ch: 2 F4 Vel:100
+41340 NoteOn Ch: 2 A4 Vel:99 Len: 54
+41394 NoteOff Ch: 2 A4 Vel:100
+41400 NoteOn Ch: 2 C5 Vel:103 Len: 108
+41508 NoteOff Ch: 2 C5 Vel:100
+41520 NoteOn Ch: 2 A#4 Vel:97 Len: 432
+41952 NoteOff Ch: 2 A#4 Vel:100
+42120 NoteOn Ch: 2 A#4 Vel:100 Len: 108
+42228 NoteOff Ch: 2 A#4 Vel:100
+42240 NoteOn Ch: 2 A4 Vel:100 Len: 216
+42456 NoteOff Ch: 2 A4 Vel:100
+42480 NoteOn Ch: 2 A4 Vel:99 Len: 216
+42696 NoteOff Ch: 2 A4 Vel:100
+42720 NoteOn Ch: 2 F4 Vel:104 Len: 216
+42936 NoteOff Ch: 2 F4 Vel:100
+42960 NoteOn Ch: 2 F4 Vel:102 Len: 216
+43176 NoteOff Ch: 2 F4 Vel:100
+43200 NoteOn Ch: 2 D4 Vel:98 Len: 216
+43416 NoteOff Ch: 2 D4 Vel:100
+43440 NoteOn Ch: 2 C4 Vel:98 Len: 648
+44088 NoteOff Ch: 2 C4 Vel:100
+44088 EndTrack
+0 SequenceTrackName Bas
+0 ControlChange Ch: 3 Controller Pan Value 64
+0 ControlChange Ch: 3 Controller 91 Value 32
+0 ControlChange Ch: 3 Controller Pan Value 64
+0 ControlChange Ch: 3 Controller 91 Value 32
+0 ControlChange Ch: 3 Controller Pan Value 64
+0 ControlChange Ch: 3 Controller 91 Value 32
+0 ControlChange Ch: 3 Controller Pan Value 64
+0 ControlChange Ch: 3 Controller 91 Value 32
+0 ControlChange Ch: 3 Controller Pan Value 64
+0 ControlChange Ch: 3 Controller 91 Value 32
+0 ControlChange Ch: 3 Controller Pan Value 64
+0 ControlChange Ch: 3 Controller 91 Value 32
+0 ControlChange Ch: 3 Controller Pan Value 64
+0 ControlChange Ch: 3 Controller 91 Value 32
+0 ControlChange Ch: 3 Controller Pan Value 64
+0 ControlChange Ch: 3 Controller 91 Value 32
+0 NoteOn Ch: 3 F4 Vel:101 Len: 324
+324 NoteOff Ch: 3 F4 Vel:100
+360 NoteOn Ch: 3 F4 Vel:97 Len: 108
+468 NoteOff Ch: 3 F4 Vel:100
+480 NoteOn Ch: 3 E4 Vel:82 Len: 432
+912 NoteOff Ch: 3 E4 Vel:64
+960 NoteOn Ch: 3 D4 Vel:96 Len: 324
+1284 NoteOff Ch: 3 D4 Vel:100
+1320 NoteOn Ch: 3 D4 Vel:98 Len: 108
+1428 NoteOff Ch: 3 D4 Vel:100
+1440 NoteOn Ch: 3 C4 Vel:100 Len: 432
+1872 NoteOff Ch: 3 C4 Vel:100
+1920 NoteOn Ch: 3 A#3 Vel:96 Len: 216
+2136 NoteOff Ch: 3 A#3 Vel:100
+2160 NoteOn Ch: 3 A#3 Vel:95 Len: 216
+2376 NoteOff Ch: 3 A#3 Vel:100
+2400 NoteOn Ch: 3 A3 Vel:98 Len: 216
+2616 NoteOff Ch: 3 A3 Vel:100
+2640 NoteOn Ch: 3 C4 Vel:97 Len: 216
+2856 NoteOff Ch: 3 C4 Vel:100
+2880 NoteOn Ch: 3 D4 Vel:98 Len: 216
+3096 NoteOff Ch: 3 D4 Vel:100
+3120 NoteOn Ch: 3 F4 Vel:99 Len: 216
+3336 NoteOff Ch: 3 F4 Vel:100
+3360 NoteOn Ch: 3 E4 Vel:104 Len: 432
+3792 NoteOff Ch: 3 E4 Vel:100
+3840 NoteOn Ch: 3 D4 Vel:102 Len: 324
+4164 NoteOff Ch: 3 D4 Vel:100
+4200 NoteOn Ch: 3 D4 Vel:99 Len: 108
+4308 NoteOff Ch: 3 D4 Vel:100
+4320 NoteOn Ch: 3 C4 Vel:98 Len: 432
+4752 NoteOff Ch: 3 C4 Vel:100
+4800 NoteOn Ch: 3 A#3 Vel:102 Len: 216
+5016 NoteOff Ch: 3 A#3 Vel:100
+5040 NoteOn Ch: 3 A#3 Vel:101 Len: 54
+5094 NoteOff Ch: 3 A#3 Vel:100
+5100 NoteOn Ch: 3 C4 Vel:98 Len: 54
+5154 NoteOff Ch: 3 C4 Vel:100
+5160 NoteOn Ch: 3 C4 Vel:95 Len: 108
+5268 NoteOff Ch: 3 C4 Vel:100
+5280 NoteOn Ch: 3 D4 Vel:96 Len: 432
+5712 NoteOff Ch: 3 D4 Vel:100
+5880 NoteOn Ch: 3 D4 Vel:96 Len: 108
+5988 NoteOff Ch: 3 D4 Vel:100
+6000 NoteOn Ch: 3 C4 Vel:96 Len: 216
+6216 NoteOff Ch: 3 C4 Vel:100
+6240 NoteOn Ch: 3 C4 Vel:96 Len: 216
+6456 NoteOff Ch: 3 C4 Vel:100
+6480 NoteOn Ch: 3 A#3 Vel:99 Len: 216
+6696 NoteOff Ch: 3 A#3 Vel:100
+6720 NoteOn Ch: 3 A3 Vel:95 Len: 216
+6936 NoteOff Ch: 3 A3 Vel:100
+6960 NoteOn Ch: 3 C4 Vel:102 Len: 216
+7176 NoteOff Ch: 3 C4 Vel:100
+7200 NoteOn Ch: 3 F3 Vel:103 Len: 672
+7872 NoteOff Ch: 3 F3 Vel:100
+8400 NoteOn Ch: 3 F4 Vel:100 Len: 324
+8724 NoteOff Ch: 3 F4 Vel:100
+8760 NoteOn Ch: 3 F4 Vel:96 Len: 108
+8868 NoteOff Ch: 3 F4 Vel:100
+8880 NoteOn Ch: 3 F4 Vel:103 Len: 432
+9312 NoteOff Ch: 3 F4 Vel:100
+9360 NoteOn Ch: 3 A4 Vel:96 Len: 324
+9684 NoteOff Ch: 3 A4 Vel:100
+9720 NoteOn Ch: 3 A4 Vel:100 Len: 108
+9828 NoteOff Ch: 3 A4 Vel:100
+9840 NoteOn Ch: 3 A4 Vel:104 Len: 324
+10164 NoteOff Ch: 3 A4 Vel:100
+10320 NoteOn Ch: 3 C5 Vel:103 Len: 324
+10644 NoteOff Ch: 3 C5 Vel:100
+10680 NoteOn Ch: 3 C5 Vel:103 Len: 108
+10788 NoteOff Ch: 3 C5 Vel:100
+10800 NoteOn Ch: 3 C5 Vel:100 Len: 216
+11016 NoteOff Ch: 3 C5 Vel:100
+11040 NoteOn Ch: 3 D5 Vel:100 Len: 216
+11256 NoteOff Ch: 3 D5 Vel:100
+11280 NoteOn Ch: 3 G4 Vel:97 Len: 216
+11496 NoteOff Ch: 3 G4 Vel:100
+11520 NoteOn Ch: 3 A4 Vel:99 Len: 588
+12108 NoteOff Ch: 3 A4 Vel:100
+15300 NoteOn Ch: 3 F4 Vel:95 Len: 54
+15354 NoteOff Ch: 3 F4 Vel:100
+15360 NoteOn Ch: 3 F4 Vel:101 Len: 108
+15468 NoteOff Ch: 3 F4 Vel:100
+15480 NoteOn Ch: 3 F4 Vel:95 Len: 108
+15588 NoteOff Ch: 3 F4 Vel:100
+15600 NoteOn Ch: 3 A4 Vel:95 Len: 324
+15924 NoteOff Ch: 3 A4 Vel:100
+15960 NoteOn Ch: 3 A4 Vel:96 Len: 108
+16068 NoteOff Ch: 3 A4 Vel:100
+16080 NoteOn Ch: 3 G4 Vel:101 Len: 216
+16296 NoteOff Ch: 3 G4 Vel:100
+16320 NoteOn Ch: 3 F4 Vel:97 Len: 432
+16320 NoteOn Ch: 3 F4 Vel:104 Len: 432
+16752 NoteOff Ch: 3 F4 Vel:100
+16752 NoteOff Ch: 3 F4 Vel:100
+17280 NoteOn Ch: 3 D4 Vel:83 Len: 216
+17496 NoteOff Ch: 3 D4 Vel:64
+17520 NoteOn Ch: 3 C4 Vel:79 Len: 216
+17736 NoteOff Ch: 3 C4 Vel:64
+17760 NoteOn Ch: 3 C4 Vel:80 Len: 216
+17976 NoteOff Ch: 3 C4 Vel:64
+18000 NoteOn Ch: 3 A#3 Vel:98 Len: 216
+18216 NoteOff Ch: 3 A#3 Vel:100
+18240 NoteOn Ch: 3 C4 Vel:103 Len: 432
+18672 NoteOff Ch: 3 C4 Vel:100
+18840 NoteOn Ch: 3 C4 Vel:97 Len: 108
+18948 NoteOff Ch: 3 C4 Vel:100
+18960 NoteOn Ch: 3 A3 Vel:95 Len: 324
+19284 NoteOff Ch: 3 A3 Vel:100
+19320 NoteOn Ch: 3 C4 Vel:102 Len: 108
+19428 NoteOff Ch: 3 C4 Vel:100
+19440 NoteOn Ch: 3 A#3 Vel:96 Len: 216
+19656 NoteOff Ch: 3 A#3 Vel:100
+19680 NoteOn Ch: 3 D4 Vel:103 Len: 216
+19896 NoteOff Ch: 3 D4 Vel:100
+19920 NoteOn Ch: 3 F4 Vel:96 Len: 216
+20136 NoteOff Ch: 3 F4 Vel:100
+20160 NoteOn Ch: 3 F4 Vel:100 Len: 216
+20376 NoteOff Ch: 3 F4 Vel:100
+20400 NoteOn Ch: 3 E4 Vel:103 Len: 216
+20616 NoteOff Ch: 3 E4 Vel:100
+20760 NoteOn Ch: 3 F4 Vel:99 Len: 108
+20868 NoteOff Ch: 3 F4 Vel:100
+20880 NoteOn Ch: 3 A4 Vel:97 Len: 114
+20994 NoteOff Ch: 3 A4 Vel:100
+21000 NoteOn Ch: 3 C5 Vel:95 Len: 216
+21216 NoteOff Ch: 3 C5 Vel:100
+21240 NoteOn Ch: 3 C5 Vel:96 Len: 444
+21684 NoteOff Ch: 3 C5 Vel:100
+21720 NoteOn Ch: 3 C5 Vel:96 Len: 108
+21828 NoteOff Ch: 3 C5 Vel:100
+21840 NoteOn Ch: 3 D5 Vel:104 Len: 108
+21948 NoteOff Ch: 3 D5 Vel:100
+21960 NoteOn Ch: 3 C5 Vel:104 Len: 108
+22068 NoteOff Ch: 3 C5 Vel:100
+22080 NoteOn Ch: 3 A4 Vel:96 Len: 108
+22188 NoteOff Ch: 3 A4 Vel:100
+22200 NoteOn Ch: 3 C5 Vel:103 Len: 816
+23016 NoteOff Ch: 3 C5 Vel:100
+25680 NoteOn Ch: 3 F4 Vel:96 Len: 324
+26004 NoteOff Ch: 3 F4 Vel:100
+26040 NoteOn Ch: 3 F4 Vel:103 Len: 108
+26148 NoteOff Ch: 3 F4 Vel:100
+26160 NoteOn Ch: 3 F4 Vel:104 Len: 1284
+27444 NoteOff Ch: 3 F4 Vel:100
+27600 NoteOn Ch: 3 C5 Vel:97 Len: 324
+27924 NoteOff Ch: 3 C5 Vel:100
+27960 NoteOn Ch: 3 C5 Vel:101 Len: 108
+28068 NoteOff Ch: 3 C5 Vel:100
+28080 NoteOn Ch: 3 C5 Vel:101 Len: 216
+28296 NoteOff Ch: 3 C5 Vel:100
+28320 NoteOn Ch: 3 D5 Vel:101 Len: 216
+28536 NoteOff Ch: 3 D5 Vel:100
+28560 NoteOn Ch: 3 G4 Vel:99 Len: 216
+28776 NoteOff Ch: 3 G4 Vel:100
+28800 NoteOn Ch: 3 A4 Vel:102 Len: 588
+29388 NoteOff Ch: 3 A4 Vel:100
+29520 NoteOn Ch: 3 F4 Vel:99 Len: 324
+29844 NoteOff Ch: 3 F4 Vel:100
+29880 NoteOn Ch: 3 F4 Vel:98 Len: 108
+29988 NoteOff Ch: 3 F4 Vel:100
+30000 NoteOn Ch: 3 F4 Vel:100 Len: 432
+30432 NoteOff Ch: 3 F4 Vel:100
+30600 NoteOn Ch: 3 D5 Vel:101 Len: 174
+30774 NoteOff Ch: 3 D5 Vel:100
+30780 NoteOn Ch: 3 C5 Vel:100 Len: 54
+30834 NoteOff Ch: 3 C5 Vel:100
+30840 NoteOn Ch: 3 A4 Vel:104 Len: 108
+30948 NoteOff Ch: 3 A4 Vel:100
+30960 NoteOn Ch: 3 C5 Vel:97 Len: 1344
+32304 NoteOff Ch: 3 C5 Vel:100
+32580 NoteOn Ch: 3 F4 Vel:100 Len: 54
+32634 NoteOff Ch: 3 F4 Vel:100
+32640 NoteOn Ch: 3 F4 Vel:103 Len: 108
+32748 NoteOff Ch: 3 F4 Vel:100
+32760 NoteOn Ch: 3 F4 Vel:100 Len: 108
+32868 NoteOff Ch: 3 F4 Vel:100
+32880 NoteOn Ch: 3 A4 Vel:96 Len: 324
+33204 NoteOff Ch: 3 A4 Vel:100
+33240 NoteOn Ch: 3 A4 Vel:99 Len: 108
+33348 NoteOff Ch: 3 A4 Vel:100
+33360 NoteOn Ch: 3 G4 Vel:103 Len: 216
+33576 NoteOff Ch: 3 G4 Vel:100
+33600 NoteOn Ch: 3 F4 Vel:101 Len: 1368
+34968 NoteOff Ch: 3 F4 Vel:100
+36240 NoteOn Ch: 3 F4 Vel:96 Len: 324
+36564 NoteOff Ch: 3 F4 Vel:100
+36600 NoteOn Ch: 3 F4 Vel:101 Len: 108
+36708 NoteOff Ch: 3 F4 Vel:100
+36720 NoteOn Ch: 3 E4 Vel:100 Len: 432
+37152 NoteOff Ch: 3 E4 Vel:100
+37200 NoteOn Ch: 3 D4 Vel:98 Len: 324
+37524 NoteOff Ch: 3 D4 Vel:100
+37560 NoteOn Ch: 3 D4 Vel:101 Len: 108
+37668 NoteOff Ch: 3 D4 Vel:100
+37680 NoteOn Ch: 3 C4 Vel:102 Len: 432
+38112 NoteOff Ch: 3 C4 Vel:100
+38160 NoteOn Ch: 3 A#3 Vel:104 Len: 216
+38376 NoteOff Ch: 3 A#3 Vel:100
+38400 NoteOn Ch: 3 A#3 Vel:104 Len: 216
+38616 NoteOff Ch: 3 A#3 Vel:100
+38640 NoteOn Ch: 3 A3 Vel:99 Len: 216
+38856 NoteOff Ch: 3 A3 Vel:100
+38880 NoteOn Ch: 3 C4 Vel:102 Len: 216
+39096 NoteOff Ch: 3 C4 Vel:100
+39120 NoteOn Ch: 3 D4 Vel:102 Len: 216
+39336 NoteOff Ch: 3 D4 Vel:100
+39360 NoteOn Ch: 3 F4 Vel:98 Len: 240
+39600 NoteOff Ch: 3 F4 Vel:100
+39600 NoteOn Ch: 3 E4 Vel:98 Len: 432
+40032 NoteOff Ch: 3 E4 Vel:100
+40080 NoteOn Ch: 3 D4 Vel:103 Len: 324
+40404 NoteOff Ch: 3 D4 Vel:100
+40440 NoteOn Ch: 3 D4 Vel:95 Len: 108
+40548 NoteOff Ch: 3 D4 Vel:100
+40560 NoteOn Ch: 3 C4 Vel:96 Len: 432
+40992 NoteOff Ch: 3 C4 Vel:100
+41040 NoteOn Ch: 3 A#3 Vel:98 Len: 294
+41334 NoteOff Ch: 3 A#3 Vel:100
+41340 NoteOn Ch: 3 C4 Vel:98 Len: 54
+41394 NoteOff Ch: 3 C4 Vel:100
+41400 NoteOn Ch: 3 C4 Vel:101 Len: 108
+41508 NoteOff Ch: 3 C4 Vel:100
+41520 NoteOn Ch: 3 D4 Vel:103 Len: 456
+41976 NoteOff Ch: 3 D4 Vel:100
+42120 NoteOn Ch: 3 D4 Vel:101 Len: 108
+42228 NoteOff Ch: 3 D4 Vel:100
+42240 NoteOn Ch: 3 C4 Vel:99 Len: 216
+42456 NoteOff Ch: 3 C4 Vel:100
+42480 NoteOn Ch: 3 C4 Vel:98 Len: 216
+42696 NoteOff Ch: 3 C4 Vel:100
+42720 NoteOn Ch: 3 A#3 Vel:103 Len: 216
+42936 NoteOff Ch: 3 A#3 Vel:100
+42960 NoteOn Ch: 3 A3 Vel:95 Len: 216
+43176 NoteOff Ch: 3 A3 Vel:100
+43200 NoteOn Ch: 3 C4 Vel:102 Len: 216
+43416 NoteOff Ch: 3 C4 Vel:100
+43440 NoteOn Ch: 3 F3 Vel:104 Len: 648
+44088 NoteOff Ch: 3 F3 Vel:100
+44088 EndTrack
