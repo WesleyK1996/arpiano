@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
 
 public class EasyValue
 {
@@ -13,7 +14,8 @@ public class EasyValue
 public class SheetManager : MonoBehaviour
 {
     public static SheetManager Instance;
-    static Transform leftSheet, rightSheet;
+    public Transform pair;
+    public Transform leftSheet, rightSheet;
     public Transform leftNotes, rightNotes;
     public Transform leftLayout, rightLayout;
 
@@ -26,7 +28,6 @@ public class SheetManager : MonoBehaviour
     public List<Tempo> tempos = new List<Tempo>();
     public int lowestLength;
     public int loadedTick;
-    public GameObject pair;
     public float playSpeed;
     public bool loaded = false;
     public float layoutWidth = 10;
@@ -50,29 +51,30 @@ public class SheetManager : MonoBehaviour
 
     private void Update()
     {
-        if (playSpeed != 0)
-        {
-            for (int i = 0; i < notesOnLeftSheet.Count; i++)
-            {
-                notesOnLeftSheet[i].transform.Translate(transform.right * -1 / playSpeed);
-                if (notesOnLeftSheet[i].transform.localPosition.z >= 0)
-                {
-                    GameObject go = notesOnLeftSheet[i];
-                    notesOnLeftSheet.RemoveAt(i);
-                    Destroy(go);
-                }
-            }
-            for (int i = 0; i < notesOnRightSheet.Count; i++)
-            {
-                notesOnRightSheet[i].transform.Translate(transform.right * -1 / playSpeed);
-                if (notesOnRightSheet[i].transform.localPosition.z >= 0)
-                {
-                    GameObject go = notesOnRightSheet[i];
-                    notesOnRightSheet.RemoveAt(i);
-                    Destroy(go);
-                }
-            }
-        }
+        //if (playSpeed != 0)
+        //{
+        //    print(playSpeed);
+        //    for (int i = 0; i < notesOnLeftSheet.Count; i++)
+        //    {
+        //        notesOnLeftSheet[i].transform.Translate(transform.right * -playSpeed);
+        //        if (notesOnLeftSheet[i].transform.localPosition.z >= 0)
+        //        {
+        //            GameObject go = notesOnLeftSheet[i];
+        //            notesOnLeftSheet.RemoveAt(i);
+        //            Destroy(go);
+        //        }
+        //    }
+        //    for (int i = 0; i < notesOnRightSheet.Count; i++)
+        //    {
+        //        notesOnRightSheet[i].transform.Translate(transform.right * -playSpeed);
+        //        if (notesOnRightSheet[i].transform.localPosition.z >= 0)
+        //        {
+        //            GameObject go = notesOnRightSheet[i];
+        //            notesOnRightSheet.RemoveAt(i);
+        //            Destroy(go);
+        //        }
+        //    }
+        //}
     }
 
     IEnumerator WaitUntilLoaded()
@@ -115,10 +117,14 @@ public class SheetManager : MonoBehaviour
 
     public void LoadStaffPair()
     {
-        pair = Instantiate(Resources.Load(Path.Combine("Prefabs", "StaffPair")), GameObject.FindGameObjectWithTag("Piano").transform) as GameObject;
+        print(0);
+        pair = GameObject.FindGameObjectWithTag("Piano").transform.Find("StaffPair");
+        //pair = Instantiate(Resources.Load(Path.Combine("Prefabs", "StaffPair")), GameObject.FindGameObjectWithTag("Piano").transform) as GameObject;
+        print(1);
         leftSheet = pair.transform.Find("Left");
         leftNotes = leftSheet.Find("Notes");
         leftLayout = leftSheet.Find("Layout");
+        print(2);
         rightSheet = pair.transform.Find("Right");
         rightNotes = rightSheet.Find("Notes");
         rightLayout = rightSheet.Find("Layout");
@@ -128,7 +134,9 @@ public class SheetManager : MonoBehaviour
 
     IEnumerator SpawnNote(List<GameObject> list)
     {
-        GameObject go = Instantiate(Resources.Load(Path.Combine("Prefabs", "Note"))) as GameObject;
+        GameObject go = Instantiate(Resources.Load(Path.Combine("Prefabs", "Note")), notesToPlay[0].isLeft ? leftNotes : rightNotes) as GameObject;
+        go.GetComponent<MoveNote>().speed = notesToPlay[0].velocity / 100000f;
+        go.GetComponent<MoveNote>().isLeft = notesToPlay[0].isLeft;
         switch (GetKeyValueToEasyValue(notesToPlay[0].length).value)
         {
             case 3:
@@ -166,7 +174,6 @@ public class SheetManager : MonoBehaviour
         if (notesToPlay[0].note[1] == '#')
             go.transform.Find("Sharp").gameObject.SetActive(true);
 
-        go.transform.parent = notesToPlay[0].isLeft ? leftNotes.transform : rightNotes.transform;
         go.name = notesToPlay[0].note;
 
         list.Add(go);
@@ -176,7 +183,7 @@ public class SheetManager : MonoBehaviour
         loadedTick = notesToPlay[0].startTick;
         if (tempos.Count > 0 && (notesToPlay[1].startTick >= tempos[0].startick || playSpeed == 0))
         {
-            playSpeed = tempos[0].speed;
+            playSpeed = 10/(1000/(tempos[0].speed/60));
             tempos.RemoveAt(0);
         }
         notesToPlay.RemoveAt(0);

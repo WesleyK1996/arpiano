@@ -60,8 +60,6 @@ public class SelectSong : MonoBehaviour
     {
         //FileInfo file = new FileInfo(path);
         TextAsset textAsset = (TextAsset)Resources.Load(Path.Combine("Text", fileName), typeof(TextAsset));
-        print(textAsset.text);
-        print(Path.Combine(Application.persistentDataPath, "Music", fileName));
         File.WriteAllText(Path.Combine(Application.persistentDataPath, "Music", fileName + ".txt"), textAsset.text);
         //DirectoryInfo dir = new DirectoryInfo(path);
         //FileInfo[] files = dir.GetFiles();
