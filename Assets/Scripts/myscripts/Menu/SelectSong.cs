@@ -1,8 +1,6 @@
 ﻿using System;
 using System.IO;
 using UnityEngine;
-using UnityEngine.Android;
-using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
@@ -12,6 +10,7 @@ using Application = UnityEngine.Application;
 using Directory = System.IO.Directory;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.Networking;
 
 public class SelectSong : MonoBehaviour
 {
@@ -32,18 +31,22 @@ public class SelectSong : MonoBehaviour
     public Text stuffthinggedoe;
 
     string path;
+    char separator;
 
     // Start is called before the first frame update
     void Start()
     {
+        separator = Path.AltDirectorySeparatorChar;
         StartCoroutine(Init());
     }
 
     private IEnumerator Init()
     {
 #if UNITY_ANDROID //&& !UNITY_EDITOR
-        if (!PlayerPrefs.HasKey("Stored"))
-            yield return StartCoroutine(WriteResouresToPersistentDataPath(Path.Combine(Application.dataPath, "Resources", "Text")));
+        //string textPath = Path.Combine(Application.dataPath, "Resources", "Text");
+        yield return StartCoroutine(WriteResoureToPersistentDataPath("Bohemian Rhapsody midi"));
+        yield return StartCoroutine(WriteResoureToPersistentDataPath("Muusika - Part Uusberg"));
+        yield return StartCoroutine(WriteResoureToPersistentDataPath("Steal away - Howard Helvey"));
 #endif
         yield return StartCoroutine(CheckAppData());
 
@@ -53,24 +56,26 @@ public class SelectSong : MonoBehaviour
     }
 
 #if UNITY_ANDROID //&& !UNITY_EDITOR
-    private IEnumerator WriteResouresToPersistentDataPath(string path)
+    private IEnumerator WriteResoureToPersistentDataPath(string fileName)
     {
-        DirectoryInfo dir = new DirectoryInfo(path);
-        FileInfo[] files = dir.GetFiles();
+        //FileInfo file = new FileInfo(path);
+        TextAsset textAsset = (TextAsset)Resources.Load(Path.Combine("Text", fileName), typeof(TextAsset));
+        print(textAsset.text);
+        print(Path.Combine(Application.persistentDataPath, "Music", fileName));
+        File.WriteAllText(Path.Combine(Application.persistentDataPath, "Music", fileName + ".txt"), textAsset.text);
+        //DirectoryInfo dir = new DirectoryInfo(path);
+        //FileInfo[] files = dir.GetFiles();
 
-
-        foreach (FileInfo file in files)
-        {
-            print(file.Extension);
-            if (file.Extension == ".txt")
-            {
-                print(Path.Combine("Text", file.Name.Replace(".txt", "")));
-                TextAsset textAsset = (TextAsset)Resources.Load(Path.Combine("Text", file.Name.Replace(".txt", "")), typeof(TextAsset));
-                print(textAsset);
-                File.WriteAllText(Path.Combine(Application.persistentDataPath, "Music", file.Name), textAsset.text);
-            }
-        }
-        PlayerPrefs.SetInt("Stored", 1);
+        //foreach (FileInfo file in files)
+        //{
+        //    if (file.Extension == ".txt")
+        //    {
+        //        print(Path.Combine("Text", file.Name.Replace(".txt", "")));
+        //        TextAsset textAsset = (TextAsset)Resources.Load(Path.Combine("Text", file.Name.Replace(".txt", "")), typeof(TextAsset));
+        //        File.WriteAllText(Path.Combine(Application.persistentDataPath, "Music", file.Name), textAsset.text);
+        //    }
+        //}
+        //PlayerPrefs.SetInt("Stored", 1);
         yield return null;
     }
 #endif
