@@ -42,12 +42,9 @@ public class SelectSong : MonoBehaviour
 
     private IEnumerator Init()
     {
-#if UNITY_ANDROID //&& !UNITY_EDITOR
-        //string textPath = Path.Combine(Application.dataPath, "Resources", "Text");
         yield return StartCoroutine(WriteResoureToPersistentDataPath("Bohemian Rhapsody midi"));
         yield return StartCoroutine(WriteResoureToPersistentDataPath("Muusika - Part Uusberg"));
         yield return StartCoroutine(WriteResoureToPersistentDataPath("Steal away - Howard Helvey"));
-#endif
         yield return StartCoroutine(CheckAppData());
 
         SetCellSize();
@@ -55,28 +52,12 @@ public class SelectSong : MonoBehaviour
         yield return null;
     }
 
-#if UNITY_ANDROID //&& !UNITY_EDITOR
     private IEnumerator WriteResoureToPersistentDataPath(string fileName)
     {
-        //FileInfo file = new FileInfo(path);
         TextAsset textAsset = (TextAsset)Resources.Load(Path.Combine("Text", fileName), typeof(TextAsset));
         File.WriteAllText(Path.Combine(Application.persistentDataPath, "Music", fileName + ".txt"), textAsset.text);
-        //DirectoryInfo dir = new DirectoryInfo(path);
-        //FileInfo[] files = dir.GetFiles();
-
-        //foreach (FileInfo file in files)
-        //{
-        //    if (file.Extension == ".txt")
-        //    {
-        //        print(Path.Combine("Text", file.Name.Replace(".txt", "")));
-        //        TextAsset textAsset = (TextAsset)Resources.Load(Path.Combine("Text", file.Name.Replace(".txt", "")), typeof(TextAsset));
-        //        File.WriteAllText(Path.Combine(Application.persistentDataPath, "Music", file.Name), textAsset.text);
-        //    }
-        //}
-        //PlayerPrefs.SetInt("Stored", 1);
         yield return null;
     }
-#endif
 
     private IEnumerator CheckAppData()
     {

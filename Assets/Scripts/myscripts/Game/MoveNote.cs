@@ -12,8 +12,8 @@ public class MoveNote : MonoBehaviour
         transform.Translate(transform.right * -speed);
         if (transform.localPosition.z >= 0)
         {
-            if(isLeft)
-            SheetManager.Instance.notesOnLeftSheet.Remove(gameObject);
+            if (isLeft)
+                SheetManager.Instance.notesOnLeftSheet.Remove(gameObject);
             else
                 SheetManager.Instance.notesOnRightSheet.Remove(gameObject);
             Destroy(gameObject);

@@ -19,7 +19,7 @@ public class NoteInfo
     public string note;
     public int startTick;
     public int length;
-    public int velocity;
+    //public int velocity;
     public bool isLeft;
 }
 
@@ -142,7 +142,7 @@ public class ReadClip : MonoBehaviour
 
                     n.note = data[4];
                     n.startTick = int.Parse(data[0]);
-                    n.velocity = int.Parse(data[5].Replace("Vel:", ""));
+                    //n.velocity = int.Parse(data[5].Replace("Vel:", ""));
                     n.length = int.Parse(data[7]);
                     if (n.length < SheetManager.Instance.lowestLength && n.length != 0)
                         SheetManager.Instance.lowestLength = n.length;
@@ -157,8 +157,6 @@ public class ReadClip : MonoBehaviour
         SheetManager.Instance.notesToPlay = notes.OrderBy(l => l.startTick).ToList();
         SheetManager.Instance.loaded = true;
 
-        //ShowKeys.Instance.ShowFirstKey();
-
         recording = true;
         yield return null;
     }
@@ -167,9 +165,7 @@ public class ReadClip : MonoBehaviour
     {
         string r = "";
         foreach (Line line in lines)
-        {
             r += line.startTick + line.rest + "\n";
-        }
         File.WriteAllText(Path.Combine(Application.persistentDataPath, "Music", "song.txt"), r);
         yield return new WaitForEndOfFrame();
     }

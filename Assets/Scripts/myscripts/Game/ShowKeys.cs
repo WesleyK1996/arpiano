@@ -22,11 +22,11 @@ public class ShowKeys : MonoBehaviour
     private void Update()
     {
         if (SheetManager.Instance.loaded)
-            if (SheetManager.Instance.notesOnLeftSheet.Count > 0 && Vector3.Distance(SheetManager.Instance.notesOnLeftSheet[0].transform.position, leftPlayLine.position) < 1f)
+            if (SheetManager.Instance.notesOnLeftSheet.Count > 0 && Vector3.Distance(SheetManager.Instance.notesOnLeftSheet[0].transform.position, leftPlayLine.position) < .2f)
             {
                 ShowKey(SheetManager.Instance.notesOnLeftSheet[0].name);
             }
-            else if (SheetManager.Instance.notesOnRightSheet.Count > 0 && Vector3.Distance(SheetManager.Instance.notesOnRightSheet[0].transform.position, rightPlayLine.position) < 1f)
+            else if (SheetManager.Instance.notesOnRightSheet.Count > 0 && Vector3.Distance(SheetManager.Instance.notesOnRightSheet[0].transform.position, rightPlayLine.position) < .2f)
             {
                 ShowKey(SheetManager.Instance.notesOnRightSheet[0].name);
             }
@@ -73,7 +73,7 @@ public class ShowKeys : MonoBehaviour
 
     void ShowKey(Material Mat, int ShowNumber)
     {
-        print("SETTING TRUE");
+        //print("SETTING TRUE");
 
         //MakeKeys.Instance.keys[ShowNumber].SetActive(true);
         //makeKeys.keys[ShowNumber].transform.GetChild(0).GetComponent<Renderer>().enabled = true;
@@ -84,16 +84,16 @@ public class ShowKeys : MonoBehaviour
 
     void ShowKey(Material Mat, string KeyName)
     {
-        print("SETTING TRUE");
-        foreach (GameObject go in MakeKeys.Instance.keys)
+        //print("SETTING TRUE");
+        foreach (GameObject key in MakeKeys.Instance.keys)
         {
-            if (go.name == KeyName)
+            if (key.name == KeyName)
             {
-                //go.SetActive(true);
-                //makeKeys.keys[ShowNumber].transform.GetChild(0).GetComponent<Renderer>().enabled = true;
-                //makeKeys.keys[ShowNumber].transform.GetChild(0).GetComponent<Collider>().enabled = true;
-                //makeKeys.keys[ShowNumber].transform.GetChild(0).GetComponent<Renderer>().material = Mat;
-                //makeKeys.keys[ShowNumber].transform.GetChild(1).GetComponent<TextMeshPro>().enabled = true;
+                key.SetActive(true);
+                key.transform.GetChild(0).GetComponent<Renderer>().enabled = true;
+                key.transform.GetChild(0).GetComponent<Collider>().enabled = true;
+                key.transform.GetChild(0).GetComponent<Renderer>().material = Mat;
+                key.transform.GetChild(1).GetComponent<TextMeshPro>().enabled = true;
 
             }
         }
@@ -124,7 +124,7 @@ public class ShowKeys : MonoBehaviour
         // Not have multiple octaves stored yet in the system. To get the center piano keys, I use +48
         //currentKey = MakeKeys.GetMostLeftKey(currentPianoKey) + 48;
 
-        ShowKey(Resources.Load(Path.Combine("Materials", "WhiteKey")) as Material, keyNumber);
+        ShowKey(Resources.Load(Path.Combine("Materials", "WhiteKey")) as Material, SheetManager.Instance.notesToPlay[0].note);
 
         filledFirst = true;
     }

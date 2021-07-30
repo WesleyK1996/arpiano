@@ -20,14 +20,13 @@ public class SheetManager : MonoBehaviour
     public Transform leftLayout, rightLayout;
 
     public int numerator, denominator;
-    public int ticksPerQuarterNote;// ticks per measure should be this * 4 * denominator
+    public int ticksPerQuarterNote;
     public List<NoteInfo> notesToPlay = new List<NoteInfo>();
     public List<GameObject> notesOnLeftSheet = new List<GameObject>();
     public List<GameObject> notesOnRightSheet = new List<GameObject>();
     public List<TimeSignature> signatures = new List<TimeSignature>();
     public List<Tempo> tempos = new List<Tempo>();
     public int lowestLength;
-    public int loadedTick;
     public float playSpeed;
     public bool loaded = false;
     public float layoutWidth = 10;
@@ -44,37 +43,36 @@ public class SheetManager : MonoBehaviour
     private void Start()
     {
         lowestLength = 999;
-        loadedTick = 0;
         playSpeed = 0;
         StartCoroutine(WaitUntilLoaded());
     }
 
     private void Update()
     {
-        //if (playSpeed != 0)
-        //{
-        //    print(playSpeed);
-        //    for (int i = 0; i < notesOnLeftSheet.Count; i++)
-        //    {
-        //        notesOnLeftSheet[i].transform.Translate(transform.right * -playSpeed);
-        //        if (notesOnLeftSheet[i].transform.localPosition.z >= 0)
-        //        {
-        //            GameObject go = notesOnLeftSheet[i];
-        //            notesOnLeftSheet.RemoveAt(i);
-        //            Destroy(go);
-        //        }
-        //    }
-        //    for (int i = 0; i < notesOnRightSheet.Count; i++)
-        //    {
-        //        notesOnRightSheet[i].transform.Translate(transform.right * -playSpeed);
-        //        if (notesOnRightSheet[i].transform.localPosition.z >= 0)
-        //        {
-        //            GameObject go = notesOnRightSheet[i];
-        //            notesOnRightSheet.RemoveAt(i);
-        //            Destroy(go);
-        //        }
-        //    }
-        //}
+        if (playSpeed != 0)
+        {
+            for (int i = 0; i < notesOnLeftSheet.Count; i++)
+            {
+                //lerp (Start, ënd, Percentage)
+                notesOnLeftSheet[i].transform.Translate(transform.right * -playSpeed * Time.deltaTime);
+                if (notesOnLeftSheet[i].transform.localPosition.z >= 0)
+                {
+                    GameObject go = notesOnLeftSheet[i];
+                    notesOnLeftSheet.RemoveAt(i);
+                    Destroy(go);
+                }
+            }
+            for (int i = 0; i < notesOnRightSheet.Count; i++)
+            {
+                notesOnRightSheet[i].transform.Translate(transform.right * -playSpeed * Time.deltaTime);
+                if (notesOnRightSheet[i].transform.localPosition.z >= 0)
+                {
+                    GameObject go = notesOnRightSheet[i];
+                    notesOnRightSheet.RemoveAt(i);
+                    Destroy(go);
+                }
+            }
+        }
     }
 
     IEnumerator WaitUntilLoaded()
@@ -117,14 +115,11 @@ public class SheetManager : MonoBehaviour
 
     public void LoadStaffPair()
     {
-        print(0);
         pair = GameObject.FindGameObjectWithTag("Piano").transform.Find("StaffPair");
         //pair = Instantiate(Resources.Load(Path.Combine("Prefabs", "StaffPair")), GameObject.FindGameObjectWithTag("Piano").transform) as GameObject;
-        print(1);
         leftSheet = pair.transform.Find("Left");
         leftNotes = leftSheet.Find("Notes");
         leftLayout = leftSheet.Find("Layout");
-        print(2);
         rightSheet = pair.transform.Find("Right");
         rightNotes = rightSheet.Find("Notes");
         rightLayout = rightSheet.Find("Layout");
@@ -135,8 +130,6 @@ public class SheetManager : MonoBehaviour
     IEnumerator SpawnNote(List<GameObject> list)
     {
         GameObject go = Instantiate(Resources.Load(Path.Combine("Prefabs", "Note")), notesToPlay[0].isLeft ? leftNotes : rightNotes) as GameObject;
-        go.GetComponent<MoveNote>().speed = notesToPlay[0].velocity / 100000f;
-        go.GetComponent<MoveNote>().isLeft = notesToPlay[0].isLeft;
         switch (GetKeyValueToEasyValue(notesToPlay[0].length).value)
         {
             case 3:
@@ -176,19 +169,40 @@ public class SheetManager : MonoBehaviour
 
         go.name = notesToPlay[0].note;
 
+        StartCoroutine(MoveNote(go, notesToPlay[0].isLeft));
         list.Add(go);
 
         yield return StartCoroutine(AddPos(list));
 
-        loadedTick = notesToPlay[0].startTick;
-        if (tempos.Count > 0 && (notesToPlay[1].startTick >= tempos[0].startick || playSpeed == 0))
+        if (tempos.Count > 0 && (notesToPlay[0].startTick >= tempos[0].startick || playSpeed == 0))
         {
-            playSpeed = 10/(1000/(tempos[0].speed/60));
+            playSpeed = 10 / (1000 / (tempos[0].speed / 60)) / 32;// /32 = divide by scale .25(piano parts.z) == *4, .5(note.z) == *2
             tempos.RemoveAt(0);
         }
         notesToPlay.RemoveAt(0);
 
         yield return new WaitForEndOfFrame();
+    }
+
+    private IEnumerator MoveNote(GameObject go, bool isLeft)
+    {
+        float t = Time.timeSinceLevelLoad;
+        float elapsed = 0;
+        Vector3 start = new Vector3(0, 0, -10);
+        Vector3 end = new Vector3(0, 0, 0);
+        while (elapsed < 1f)
+        {
+            go.transform.localPosition = Vector3.Lerp(start, end, elapsed);
+            elapsed += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+
+        if (isLeft)
+            notesOnLeftSheet.Remove(go);
+        else
+            notesOnRightSheet.Remove(go);
+        Destroy(go);
+        print(Time.timeSinceLevelLoad - t);
     }
 
     EasyValue GetKeyValueToEasyValue(int length)

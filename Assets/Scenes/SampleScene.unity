@@ -253,7 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedLibrary: {fileID: 11400000, guid: af9c29587723a8245a82d792bf4f0072,
     type: 2}
-  m_MaxNumberOfMovingImages: 3
+  m_MaxNumberOfMovingImages: 1
   m_TrackedImagePrefab: {fileID: 7383810464610756405, guid: 355d0bbe6090c32439666a367effeb96,
     type: 3}
 --- !u!114 &511206766
@@ -525,6 +525,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8b66e0c779784439847972d8371e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pair: {fileID: 0}
+  leftSheet: {fileID: 0}
+  rightSheet: {fileID: 0}
   leftNotes: {fileID: 0}
   rightNotes: {fileID: 0}
   leftLayout: {fileID: 0}
@@ -538,8 +541,6 @@ MonoBehaviour:
   signatures: []
   tempos: []
   lowestLength: 999
-  loadedTick: 0
-  pair: {fileID: 0}
   playSpeed: 0
   loaded: 0
   layoutWidth: 10
