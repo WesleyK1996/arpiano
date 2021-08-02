@@ -15,6 +15,10 @@ public class ImageTracking : MonoBehaviour
 
     private void Awake()
     {
+#if UNITY_ANDROID && !UNITY_EDITOR
+        Destroy(this);
+        return;
+#endif
         trackedImageManager = FindObjectOfType<ARTrackedImageManager>();
         Piano = Instantiate(trackedImageManager.trackedImagePrefab);
     }

@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.IO;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -18,7 +20,10 @@ public class Calibrate : MonoBehaviour
     float blackKeyWidth = .9f;
     float blackKeyHeight = 9.5f;
 
-    public RadialSlider x, y, z;
+    public GameObject piano;
+    public Button xUp, xDown, yUp, yDown, zUp, zDown;
+    public TextMeshProUGUI xVal, yVal, zVal;
+    public Text pos, rot, scale;
 
     private void OnEnable()
     {
@@ -30,23 +35,53 @@ public class Calibrate : MonoBehaviour
 
     private void Start()
     {
-        SetSliderValues();
+        SetTextValues();
+        piano = GameObject.FindGameObjectWithTag("Piano");
+        SetTriggers();
         SpawnPiano(transform);
     }
 
-
-    private void Update()
+    private void SetTriggers()
     {
-        transform.rotation = Quaternion.Euler(x.currentValue, y.currentValue, z.currentValue);
+        EventTrigger.Entry entry = new EventTrigger.Entry();
+
+        entry.eventID = EventTriggerType.PointerDown;
+        entry.callback.AddListener(delegate { StartCoroutine(RotXUp()); });
+        xUp.GetComponent<EventTrigger>().triggers.Add(entry);
+
+        entry = new EventTrigger.Entry();
+        entry.eventID = EventTriggerType.PointerDown;
+        entry.callback.AddListener(delegate { StartCoroutine(RotXDown()); });
+        xDown.GetComponent<EventTrigger>().triggers.Add(entry);
+
+        entry = new EventTrigger.Entry();
+        entry.eventID = EventTriggerType.PointerDown;
+        entry.callback.AddListener(delegate { StartCoroutine(RotYUp()); });
+        yUp.GetComponent<EventTrigger>().triggers.Add(entry);
+
+        entry = new EventTrigger.Entry();
+        entry.eventID = EventTriggerType.PointerDown;
+        entry.callback.AddListener(delegate { StartCoroutine(RotYDown()); });
+        yDown.GetComponent<EventTrigger>().triggers.Add(entry);
+
+        entry = new EventTrigger.Entry();
+        entry.eventID = EventTriggerType.PointerDown;
+        entry.callback.AddListener(delegate { StartCoroutine(RotZUp()); });
+        zUp.GetComponent<EventTrigger>().triggers.Add(entry);
+
+        entry = new EventTrigger.Entry();
+        entry.eventID = EventTriggerType.PointerDown;
+        entry.callback.AddListener(delegate { StartCoroutine(RotZDown()); });
+        zDown.GetComponent<EventTrigger>().triggers.Add(entry);
     }
 
-    private void SetSliderValues()
+    private void SetTextValues()
     {
         if (PlayerPrefs.HasKey("XRot"))
         {
-            x.currentValue = PlayerPrefs.GetFloat("XRot");
-            y.currentValue = PlayerPrefs.GetFloat("YRot");
-            z.currentValue = PlayerPrefs.GetFloat("ZRot");
+            xVal.text = "" + PlayerPrefs.GetFloat("XRot");
+            yVal.text = "" + PlayerPrefs.GetFloat("YRot");
+            zVal.text = "" + PlayerPrefs.GetFloat("ZRot");
         }
     }
 
@@ -56,7 +91,7 @@ public class Calibrate : MonoBehaviour
         {
             if (currentKey.ToString().Length == 2)
             {
-                go = Instantiate(Resources.Load(Path.Combine("Prefabs", "BlackOriginal")) as GameObject, transform);
+                go = Instantiate(Resources.Load(Path.Combine("Prefabs", "BlackOriginal")) as GameObject, piano.transform.GetChild(0));
                 go.tag = "Key";
                 go.transform.localPosition = new Vector3(0, 0, ((currentPos + 1) * 10 * whiteKeyWidth - blackKeyWidth * 5) * -1);
                 Vector3 SizeScale = go.transform.Find("Plane").localScale;
@@ -73,7 +108,7 @@ public class Calibrate : MonoBehaviour
             }
             else
             {
-                go = Instantiate(Resources.Load(Path.Combine("Prefabs", "WhiteOriginal")) as GameObject, transform);
+                go = Instantiate(Resources.Load(Path.Combine("Prefabs", "WhiteOriginal")) as GameObject, piano.transform.GetChild(0));
                 go.tag = "Key";
                 go.transform.localPosition = new Vector3(0, 0, (currentPos * 10 * whiteKeyWidth) * -1);
                 Vector3 SizeScale = go.transform.Find("Plane").localScale;
@@ -97,6 +132,10 @@ public class Calibrate : MonoBehaviour
 
             transform.position = new Vector3(-PlayerPrefs.GetInt("amountOfKeys") / 2, 0, 0);
         }
+        piano.transform.localScale *= 100;
+        pos.text = piano.transform.position.ToString();
+        rot.text = piano.transform.eulerAngles.ToString();
+        rot.text = piano.transform.localScale.ToString();
         LoadCalibration(transform);
     }
 
@@ -123,6 +162,97 @@ public class Calibrate : MonoBehaviour
                 transform.localPosition += Vector3.forward * -.5f;
                 break;
         }
+    }
+
+    public IEnumerator RotXUp()
+    {
+        while (Input.GetMouseButton(0))
+        {
+            float v = float.Parse(xVal.text);
+            print(v);
+            if (v >= 360)
+                xVal.text = (v % 360).ToString();
+            else
+            {
+                xVal.text = (v + .5f).ToString();
+            }
+            SetPianoRot();
+            yield return new WaitForSeconds(.1f);
+        }
+    }
+
+    public IEnumerator RotXDown()
+    {
+        while (Input.GetMouseButton(0))
+        {
+            float v = float.Parse(xVal.text);
+            if (v < 0)
+                xVal.text = (360 - v).ToString();
+            else
+                xVal.text = (v - .5f).ToString();
+            SetPianoRot();
+            yield return new WaitForSeconds(.1f);
+        }
+    }
+    public IEnumerator RotYUp()
+    {
+        while (Input.GetMouseButton(0))
+        {
+            float v = float.Parse(yVal.text);
+            if (v >= 360)
+                yVal.text = (v % 360).ToString();
+            else
+                yVal.text = (v + .5f).ToString();
+            SetPianoRot();
+            yield return new WaitForSeconds(.1f);
+        }
+    }
+
+    public IEnumerator RotYDown()
+    {
+        while (Input.GetMouseButton(0))
+        {
+            float v = float.Parse(yVal.text);
+            if (v < 0)
+                yVal.text = (360 - v).ToString();
+            else
+                yVal.text = (v - .5f).ToString();
+            SetPianoRot();
+            yield return new WaitForSeconds(.1f);
+        }
+    }
+    public IEnumerator RotZUp()
+    {
+        while (Input.GetMouseButton(0))
+        {
+            float v = float.Parse(zVal.text);
+            if (v >= 360)
+                zVal.text = (v % 360).ToString();
+            else
+                zVal.text = (v + .5f).ToString();
+            SetPianoRot();
+            yield return new WaitForSeconds(.1f);
+        }
+    }
+
+    public IEnumerator RotZDown()
+    {
+        while (Input.GetMouseButton(0))
+        {
+            float v = float.Parse(zVal.text);
+            if (v < 0)
+                zVal.text = (v % 360).ToString();
+            else
+                zVal.text = (v - .5f).ToString();
+            SetPianoRot();
+            yield return new WaitForSeconds(.1f);
+        }
+    }
+
+    void SetPianoRot()
+    {
+        piano.transform.eulerAngles = new Vector3(float.Parse(xVal.text), float.Parse(yVal.text), float.Parse(zVal.text));
+        print(piano.transform.eulerAngles);
     }
 
     /// <summary>
