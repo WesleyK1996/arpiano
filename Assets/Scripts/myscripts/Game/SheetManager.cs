@@ -49,30 +49,30 @@ public class SheetManager : MonoBehaviour
 
     private void Update()
     {
-        if (playSpeed != 0)
-        {
-            for (int i = 0; i < notesOnLeftSheet.Count; i++)
-            {
-                //lerp (Start, ënd, Percentage)
-                notesOnLeftSheet[i].transform.Translate(transform.right * -playSpeed * Time.deltaTime);
-                if (notesOnLeftSheet[i].transform.localPosition.z >= 0)
-                {
-                    GameObject go = notesOnLeftSheet[i];
-                    notesOnLeftSheet.RemoveAt(i);
-                    Destroy(go);
-                }
-            }
-            for (int i = 0; i < notesOnRightSheet.Count; i++)
-            {
-                notesOnRightSheet[i].transform.Translate(transform.right * -playSpeed * Time.deltaTime);
-                if (notesOnRightSheet[i].transform.localPosition.z >= 0)
-                {
-                    GameObject go = notesOnRightSheet[i];
-                    notesOnRightSheet.RemoveAt(i);
-                    Destroy(go);
-                }
-            }
-        }
+        //if (playSpeed != 0)
+        //{
+        //    for (int i = 0; i < notesOnLeftSheet.Count; i++)
+        //    {
+        //        //lerp (Start, ënd, Percentage)
+        //        notesOnLeftSheet[i].transform.Translate(transform.right * -playSpeed * Time.deltaTime);
+        //        if (notesOnLeftSheet[i].transform.localPosition.z >= 0)
+        //        {
+        //            GameObject go = notesOnLeftSheet[i];
+        //            notesOnLeftSheet.RemoveAt(i);
+        //            Destroy(go);
+        //        }
+        //    }
+        //    for (int i = 0; i < notesOnRightSheet.Count; i++)
+        //    {
+        //        notesOnRightSheet[i].transform.Translate(transform.right * -playSpeed * Time.deltaTime);
+        //        if (notesOnRightSheet[i].transform.localPosition.z >= 0)
+        //        {
+        //            GameObject go = notesOnRightSheet[i];
+        //            notesOnRightSheet.RemoveAt(i);
+        //            Destroy(go);
+        //        }
+        //    }
+        //}
     }
 
     IEnumerator WaitUntilLoaded()

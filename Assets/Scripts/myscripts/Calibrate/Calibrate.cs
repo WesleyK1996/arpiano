@@ -35,10 +35,16 @@ public class Calibrate : MonoBehaviour
 
     private void Start()
     {
-        SetTextValues();
+        StartCoroutine(LateStart());
+    }
+
+    IEnumerator LateStart()
+    {
+        yield return new WaitUntil(() => GameObject.FindGameObjectWithTag("Piano") != null);
         piano = GameObject.FindGameObjectWithTag("Piano");
+        SetTextValues();
+        SpawnKeys(piano.transform.GetChild(0));
         SetTriggers();
-        SpawnPiano(transform);
     }
 
     private void SetTriggers()
@@ -85,13 +91,14 @@ public class Calibrate : MonoBehaviour
         }
     }
 
-    private void SpawnPiano(Transform parent)
+    private void SpawnKeys(Transform parent)
     {
         for (int i = 0; i < PlayerPrefs.GetInt("amountOfKeys"); i++)
         {
             if (currentKey.ToString().Length == 2)
             {
-                go = Instantiate(Resources.Load(Path.Combine("Prefabs", "BlackOriginal")) as GameObject, piano.transform.GetChild(0));
+
+                go = Instantiate(Resources.Load(Path.Combine("Prefabs", "BlackOriginal")) as GameObject, parent);
                 go.tag = "Key";
                 go.transform.localPosition = new Vector3(0, 0, ((currentPos + 1) * 10 * whiteKeyWidth - blackKeyWidth * 5) * -1);
                 Vector3 SizeScale = go.transform.Find("Plane").localScale;
@@ -108,7 +115,7 @@ public class Calibrate : MonoBehaviour
             }
             else
             {
-                go = Instantiate(Resources.Load(Path.Combine("Prefabs", "WhiteOriginal")) as GameObject, piano.transform.GetChild(0));
+                go = Instantiate(Resources.Load(Path.Combine("Prefabs", "WhiteOriginal")) as GameObject, parent);
                 go.tag = "Key";
                 go.transform.localPosition = new Vector3(0, 0, (currentPos * 10 * whiteKeyWidth) * -1);
                 Vector3 SizeScale = go.transform.Find("Plane").localScale;
@@ -132,10 +139,8 @@ public class Calibrate : MonoBehaviour
 
             transform.position = new Vector3(-PlayerPrefs.GetInt("amountOfKeys") / 2, 0, 0);
         }
-        piano.transform.localScale *= 100;
-        pos.text = piano.transform.position.ToString();
-        rot.text = piano.transform.eulerAngles.ToString();
-        rot.text = piano.transform.localScale.ToString();
+        pos.text = piano.transform.localScale.x.ToString();
+        rot.text = piano.transform.GetChild(0).localScale.x.ToString();
         LoadCalibration(transform);
     }
 
