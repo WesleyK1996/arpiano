@@ -20,7 +20,7 @@ public class Calibrate : MonoBehaviour
     float blackKeyWidth = .9f;
     float blackKeyHeight = 9.5f;
 
-    public GameObject piano;
+    public GameObject keys;
     public Button xUp, xDown, yUp, yDown, zUp, zDown;
     public TextMeshProUGUI xVal, yVal, zVal;
     public Text pos, rot, scale;
@@ -41,9 +41,9 @@ public class Calibrate : MonoBehaviour
     IEnumerator LateStart()
     {
         yield return new WaitUntil(() => GameObject.FindGameObjectWithTag("Piano") != null);
-        piano = GameObject.FindGameObjectWithTag("Piano");
+        keys = GameObject.FindGameObjectWithTag("Piano").transform.GetChild(0).gameObject;
         SetTextValues();
-        SpawnKeys(piano.transform.GetChild(0));
+        SpawnKeys(keys.transform);
         SetTriggers();
     }
 
@@ -97,7 +97,6 @@ public class Calibrate : MonoBehaviour
         {
             if (currentKey.ToString().Length == 2)
             {
-
                 go = Instantiate(Resources.Load(Path.Combine("Prefabs", "BlackOriginal")) as GameObject, parent);
                 go.tag = "Key";
                 go.transform.localPosition = new Vector3(0, 0, ((currentPos + 1) * 10 * whiteKeyWidth - blackKeyWidth * 5) * -1);
@@ -137,34 +136,34 @@ public class Calibrate : MonoBehaviour
             if (currentKey.ToString().Length != 2)
                 currentPos++;
 
-            transform.position = new Vector3(-PlayerPrefs.GetInt("amountOfKeys") / 2, 0, 0);
+            keys.transform.position = new Vector3(-PlayerPrefs.GetInt("amountOfKeys") / 2, 0, 0);
         }
-        pos.text = piano.transform.localScale.x.ToString();
-        rot.text = piano.transform.GetChild(0).localScale.x.ToString();
-        LoadCalibration(transform);
+        pos.text = keys.transform.localScale.x.ToString();
+        rot.text = keys.transform.GetChild(0).localScale.x.ToString();
+        LoadCalibration(parent);
     }
 
-    public void MovePiano(string direction)
+    public void MoveKeys(string direction)
     {
         switch (direction)
         {
             case "Up":
-                transform.localPosition += Vector3.up * -.5f;
+                keys.transform.localPosition += Vector3.up * -.5f;
                 break;
             case "Down":
-                transform.localPosition += Vector3.up * .5f;
+                keys.transform.localPosition += Vector3.up * .5f;
                 break;
             case "Left":
-                transform.localPosition += Vector3.right * -.5f;
+                keys.transform.localPosition += Vector3.right * -.5f;
                 break;
             case "Right":
-                transform.localPosition += Vector3.right * .5f;
+                keys.transform.localPosition += Vector3.right * .5f;
                 break;
             case "High":
-                transform.localPosition += Vector3.forward * .5f;
+                keys.transform.localPosition += Vector3.forward * .5f;
                 break;
             case "Low":
-                transform.localPosition += Vector3.forward * -.5f;
+                keys.transform.localPosition += Vector3.forward * -.5f;
                 break;
         }
     }
@@ -178,9 +177,7 @@ public class Calibrate : MonoBehaviour
             if (v >= 360)
                 xVal.text = (v % 360).ToString();
             else
-            {
                 xVal.text = (v + .5f).ToString();
-            }
             SetPianoRot();
             yield return new WaitForSeconds(.1f);
         }
@@ -256,8 +253,16 @@ public class Calibrate : MonoBehaviour
 
     void SetPianoRot()
     {
-        piano.transform.eulerAngles = new Vector3(float.Parse(xVal.text), float.Parse(yVal.text), float.Parse(zVal.text));
-        print(piano.transform.eulerAngles);
+        keys.transform.eulerAngles = new Vector3(float.Parse(xVal.text), float.Parse(yVal.text), float.Parse(zVal.text));
+    }
+
+    public void ResetPose()
+    {
+        keys.transform.position = Vector3.zero;
+        keys.transform.eulerAngles = Vector3.zero;
+        xVal.text = "" + 0;
+        yVal.text = "" + 0;
+        zVal.text = "" + 0;
     }
 
     /// <summary>
