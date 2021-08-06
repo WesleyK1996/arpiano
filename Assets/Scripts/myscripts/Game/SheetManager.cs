@@ -18,6 +18,7 @@ public class SheetManager : MonoBehaviour
     public Transform leftSheet, rightSheet;
     public Transform leftNotes, rightNotes;
     public Transform leftLayout, rightLayout;
+    public Transform leftPlayLine, rightPlayLine;
 
     public int numerator, denominator;
     public int ticksPerQuarterNote;
@@ -49,30 +50,21 @@ public class SheetManager : MonoBehaviour
 
     private void Update()
     {
-        //if (playSpeed != 0)
-        //{
-        //    for (int i = 0; i < notesOnLeftSheet.Count; i++)
-        //    {
-        //        //lerp (Start, ënd, Percentage)
-        //        notesOnLeftSheet[i].transform.Translate(transform.right * -playSpeed * Time.deltaTime);
-        //        if (notesOnLeftSheet[i].transform.localPosition.z >= 0)
-        //        {
-        //            GameObject go = notesOnLeftSheet[i];
-        //            notesOnLeftSheet.RemoveAt(i);
-        //            Destroy(go);
-        //        }
-        //    }
-        //    for (int i = 0; i < notesOnRightSheet.Count; i++)
-        //    {
-        //        notesOnRightSheet[i].transform.Translate(transform.right * -playSpeed * Time.deltaTime);
-        //        if (notesOnRightSheet[i].transform.localPosition.z >= 0)
-        //        {
-        //            GameObject go = notesOnRightSheet[i];
-        //            notesOnRightSheet.RemoveAt(i);
-        //            Destroy(go);
-        //        }
-        //    }
-        //}
+        if (loaded)
+            if (notesOnLeftSheet.Count > 0 && Vector3.Distance(notesOnLeftSheet[0].transform.position, leftPlayLine.position) < .2f)
+            {
+
+            }
+            else if (notesOnRightSheet.Count > 0 && Vector3.Distance(notesOnRightSheet[0].transform.position, rightPlayLine.position) < .2f)
+            {
+                if (notesOnRightSheet[0].name[0] == 'T')
+                    playSpeed = SetTempo(int.Parse(notesOnRightSheet[0].name.Replace("T", "")));
+            }
+    }
+
+    private float SetTempo(float speed)
+    {
+        return 10f / (1000f / (speed / 60f)) / 32f;// /32 = divide by scale .25(piano parts.z) == *4, .5(note.z) == *2
     }
 
     IEnumerator WaitUntilLoaded()
@@ -123,62 +115,66 @@ public class SheetManager : MonoBehaviour
         rightSheet = pair.transform.Find("Right");
         rightNotes = rightSheet.Find("Notes");
         rightLayout = rightSheet.Find("Layout");
-        ShowKeys.Instance.leftPlayLine = leftLayout.Find("PlayLine");
-        ShowKeys.Instance.rightPlayLine = rightLayout.Find("PlayLine");
+        leftPlayLine = leftLayout.Find("PlayLine");
+        rightPlayLine = rightLayout.Find("PlayLine");
     }
 
     IEnumerator SpawnNote(List<GameObject> list)
     {
         GameObject go = Instantiate(Resources.Load(Path.Combine("Prefabs", "Note")), notesToPlay[0].isLeft ? leftNotes : rightNotes) as GameObject;
-        switch (GetKeyValueToEasyValue(notesToPlay[0].length).value)
+        if (notesToPlay[0].note == "T")
         {
-            case 3:
-            case 2:
-                go.transform.Find("Half").gameObject.SetActive(true);
-                break;
-            case 1.5f:
-            case 1:
-                go.transform.Find("Half").gameObject.SetActive(true);
-                go.transform.Find("Quarter").gameObject.SetActive(true);
-                break;
-            case .75f:
-            case .5f:
-                go.transform.Find("Half").gameObject.SetActive(true);
-                go.transform.Find("Quarter").gameObject.SetActive(true);
-                go.transform.Find("Eighth").gameObject.SetActive(true);
-                break;
-            case .375f:
-            case .25f:
-                go.transform.Find("Half").gameObject.SetActive(true);
-                go.transform.Find("Quarter").gameObject.SetActive(true);
-                go.transform.Find("Eighth").gameObject.SetActive(true);
-                go.transform.Find("16th").gameObject.SetActive(true);
-                break;
-            case .1875f:
-            case .125f:
-                go.transform.Find("Half").gameObject.SetActive(true);
-                go.transform.Find("Quarter").gameObject.SetActive(true);
-                go.transform.Find("Eighth").gameObject.SetActive(true);
-                go.transform.Find("16th").gameObject.SetActive(true);
-                go.transform.Find("32nd").gameObject.SetActive(true);
-                break;
-            default: break;
+            go.transform.Find("Whole").gameObject.SetActive(false);
+            go.name = "T" + notesToPlay[0].bpm;
         }
-        if (notesToPlay[0].note[1] == '#')
-            go.transform.Find("Sharp").gameObject.SetActive(true);
+        else
+        {
+            switch (GetKeyValueToEasyValue(notesToPlay[0].length).value)
+            {
+                case 3:
+                case 2:
+                    go.transform.Find("Half").gameObject.SetActive(true);
+                    break;
+                case 1.5f:
+                case 1:
+                    go.transform.Find("Half").gameObject.SetActive(true);
+                    go.transform.Find("Quarter").gameObject.SetActive(true);
+                    break;
+                case .75f:
+                case .5f:
+                    go.transform.Find("Half").gameObject.SetActive(true);
+                    go.transform.Find("Quarter").gameObject.SetActive(true);
+                    go.transform.Find("Eighth").gameObject.SetActive(true);
+                    break;
+                case .375f:
+                case .25f:
+                    go.transform.Find("Half").gameObject.SetActive(true);
+                    go.transform.Find("Quarter").gameObject.SetActive(true);
+                    go.transform.Find("Eighth").gameObject.SetActive(true);
+                    go.transform.Find("16th").gameObject.SetActive(true);
+                    break;
+                case .1875f:
+                case .125f:
+                    go.transform.Find("Half").gameObject.SetActive(true);
+                    go.transform.Find("Quarter").gameObject.SetActive(true);
+                    go.transform.Find("Eighth").gameObject.SetActive(true);
+                    go.transform.Find("16th").gameObject.SetActive(true);
+                    go.transform.Find("32nd").gameObject.SetActive(true);
+                    break;
+                default: break;
+            }
+            if (notesToPlay[0].note[1] == '#')
+                go.transform.Find("Sharp").gameObject.SetActive(true);
 
-        go.name = notesToPlay[0].note;
+            go.name = notesToPlay[0].note;
+        }
 
-        StartCoroutine(MoveNote(go, notesToPlay[0].isLeft));
+
         list.Add(go);
 
         yield return StartCoroutine(AddPos(list));
+        StartCoroutine(MoveNote(go, notesToPlay[0].isLeft));
 
-        if (tempos.Count > 0 && (notesToPlay[0].startTick >= tempos[0].startick || playSpeed == 0))
-        {
-            playSpeed = 10 / (1000 / (tempos[0].speed / 60)) / 32;// /32 = divide by scale .25(piano parts.z) == *4, .5(note.z) == *2
-            tempos.RemoveAt(0);
-        }
         notesToPlay.RemoveAt(0);
 
         yield return new WaitForEndOfFrame();
@@ -188,12 +184,12 @@ public class SheetManager : MonoBehaviour
     {
         float t = Time.timeSinceLevelLoad;
         float elapsed = 0;
-        Vector3 start = new Vector3(0, 0, -10);
-        Vector3 end = new Vector3(0, 0, 0);
+        Vector3 start = new Vector3(go.transform.localPosition.x, go.transform.localPosition.y, -10);
+        Vector3 end = new Vector3(go.transform.localPosition.x, go.transform.localPosition.y, 0);
         while (elapsed < 1f)
         {
             go.transform.localPosition = Vector3.Lerp(start, end, elapsed);
-            elapsed += Time.deltaTime;
+            elapsed = (Time.timeSinceLevelLoad - t) / (tempos[0].speed / AmountOfNotes); // hoeveelheid seconden berekenen
             yield return new WaitForEndOfFrame();
         }
 
@@ -281,7 +277,14 @@ public class SheetManager : MonoBehaviour
         float distancePerQuarterNote = (layoutWidth / AmountOfNotes);
         float z;
         if (list.Count >= 2)
-            z = list[list.Count - 2].transform.localPosition.z - distancePerQuarterNote * GetKeyValueToEasyValue(notesToPlay[0].length).value;
+        {
+            if (list[list.Count - 2].name[0] == 'T')
+            {
+                z = 
+            }
+            else
+                z = list[list.Count - 2].transform.localPosition.z - distancePerQuarterNote * GetKeyValueToEasyValue(notesToPlay[0].length).value;
+        }
         else
             z = -layoutWidth;
         return z;

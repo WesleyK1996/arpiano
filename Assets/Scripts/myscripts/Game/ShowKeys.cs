@@ -10,8 +10,6 @@ public class ShowKeys : MonoBehaviour
     public int currentKey, redKey, keyNumber;
     private bool filledFirst;
 
-    public Transform leftPlayLine, rightPlayLine;
-
     private void Awake()
     {
         if (Instance == null)
@@ -21,15 +19,6 @@ public class ShowKeys : MonoBehaviour
 
     private void Update()
     {
-        if (SheetManager.Instance.loaded)
-            if (SheetManager.Instance.notesOnLeftSheet.Count > 0 && Vector3.Distance(SheetManager.Instance.notesOnLeftSheet[0].transform.position, leftPlayLine.position) < .2f)
-            {
-                ShowKey(SheetManager.Instance.notesOnLeftSheet[0].name);
-            }
-            else if (SheetManager.Instance.notesOnRightSheet.Count > 0 && Vector3.Distance(SheetManager.Instance.notesOnRightSheet[0].transform.position, rightPlayLine.position) < .2f)
-            {
-                ShowKey(SheetManager.Instance.notesOnRightSheet[0].name);
-            }
     }
 
     public IEnumerator CheckKey(NoteInfo note)

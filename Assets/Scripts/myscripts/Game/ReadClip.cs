@@ -21,6 +21,8 @@ public class NoteInfo
     public int length;
     //public int velocity;
     public bool isLeft;
+    public int bpm;
+    public float speed;
 }
 
 [Serializable]
@@ -115,12 +117,18 @@ public class ReadClip : MonoBehaviour
             data = line.Split(' ');
             if (data[1] == "SetTempo")
             {
-                Tempo t = new Tempo()
-                {
-                    startick = int.Parse(data[0]),
-                    speed = float.Parse(data[2].Replace("bpm", ""))
-                };
-                SheetManager.Instance.tempos.Add(t);
+                NoteInfo n = new NoteInfo();
+                n.note = "T";
+                n.startTick = int.Parse(data[0]);
+                n.speed = float.Parse(data[2].Replace("bpm", ""));
+                n.isLeft = false;
+                SheetManager.Instance.notesToPlay.Add(n);
+                //Tempo t = new Tempo()
+                //{
+                //    startick = int.Parse(data[0]),
+                //    speed = float.Parse(data[2].Replace("bpm", ""))
+                //};
+                //SheetManager.Instance.tempos.Add(t);
             }
             if (data[1] == "TimeSignature")
             {
