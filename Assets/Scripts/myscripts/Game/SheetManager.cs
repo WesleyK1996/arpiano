@@ -26,8 +26,9 @@ public class SheetManager : MonoBehaviour
     public List<GameObject> notesOnLeftSheet = new List<GameObject>();
     public List<GameObject> notesOnRightSheet = new List<GameObject>();
     public List<TimeSignature> signatures = new List<TimeSignature>();
-    public List<Tempo> tempos = new List<Tempo>();
     public int lowestLength;
+    int lastLeftLength;
+    int lastRightLength;
     public float playSpeed;
     public bool loaded = false;
     public float layoutWidth = 10;
@@ -51,18 +52,18 @@ public class SheetManager : MonoBehaviour
     private void Update()
     {
         if (loaded)
-            if (notesOnLeftSheet.Count > 0 && Vector3.Distance(notesOnLeftSheet[0].transform.position, leftPlayLine.position) < .2f)
-            {
-
-            }
-            else if (notesOnRightSheet.Count > 0 && Vector3.Distance(notesOnRightSheet[0].transform.position, rightPlayLine.position) < .2f)
+            if (notesOnRightSheet.Count > 0 && Vector3.Distance(notesOnRightSheet[0].transform.position, rightPlayLine.position) < .2f)
             {
                 if (notesOnRightSheet[0].name[0] == 'T')
                     playSpeed = SetTempo(int.Parse(notesOnRightSheet[0].name.Replace("T", "")));
+                else
+                    ShowKeys.Instance.ShowKey(notesOnRightSheet[0].name);
             }
+        if (notesOnLeftSheet.Count > 0 && Vector3.Distance(notesOnLeftSheet[0].transform.position, leftPlayLine.position) < .2f)
+            ShowKeys.Instance.ShowKey(notesOnLeftSheet[0].name);
     }
 
-    private float SetTempo(float speed)
+    public float SetTempo(float speed)
     {
         return 10f / (1000f / (speed / 60f)) / 32f;// /32 = divide by scale .25(piano parts.z) == *4, .5(note.z) == *2
     }
@@ -73,7 +74,7 @@ public class SheetManager : MonoBehaviour
         yield return StartCoroutine(SpawnNotesWhenSpace());
     }
 
-    private IEnumerator SpawnNotesWhenSpace()
+    private IEnumerator SpawnNotesWhenSpace()//how to spawn double notes??(see bohemian sheet)
     {
         while (notesToPlay.Count != 0)
         {
@@ -83,9 +84,10 @@ public class SheetManager : MonoBehaviour
             //float CurNoteLength = GetKeyValueToEasyValue(notesToPlay[0].length).value;
             if (notesToPlay[0].isLeft)
             {
+                lastLeftLength = notesToPlay[0].length;
                 if (notesOnLeftSheet.Count > 0)
                 {
-                    if (notesOnLeftSheet[notesOnLeftSheet.Count - 1].transform.localPosition.z >= -layoutWidth + distancePerQuarterNote)
+                    if (notesOnLeftSheet[notesOnLeftSheet.Count - 1].transform.localPosition.z >= -layoutWidth + distancePerQuarterNote * GetKeyValueToEasyValue(lastLeftLength).value)
                         yield return StartCoroutine(SpawnNote(notesOnLeftSheet));
                 }
                 else
@@ -93,9 +95,10 @@ public class SheetManager : MonoBehaviour
             }
             else
             {
+                lastRightLength = notesToPlay[0].length;
                 if (notesOnRightSheet.Count > 0)
                 {
-                    if (notesOnRightSheet[notesOnRightSheet.Count - 1].transform.localPosition.z >= -layoutWidth + distancePerQuarterNote)
+                    if (notesOnRightSheet[notesOnRightSheet.Count - 1].transform.localPosition.z >= -layoutWidth + distancePerQuarterNote * GetKeyValueToEasyValue(lastRightLength).value)
                         yield return StartCoroutine(SpawnNote(notesOnRightSheet));
                 }
                 else
@@ -122,6 +125,7 @@ public class SheetManager : MonoBehaviour
     IEnumerator SpawnNote(List<GameObject> list)
     {
         GameObject go = Instantiate(Resources.Load(Path.Combine("Prefabs", "Note")), notesToPlay[0].isLeft ? leftNotes : rightNotes) as GameObject;
+        go.transform.localPosition = new Vector3(-.02f, SetY(), -10);
         if (notesToPlay[0].note == "T")
         {
             go.transform.Find("Whole").gameObject.SetActive(false);
@@ -169,10 +173,9 @@ public class SheetManager : MonoBehaviour
             go.name = notesToPlay[0].note;
         }
 
-
         list.Add(go);
 
-        yield return StartCoroutine(AddPos(list));
+        //yield return StartCoroutine(AddPos(list));
         StartCoroutine(MoveNote(go, notesToPlay[0].isLeft));
 
         notesToPlay.RemoveAt(0);
@@ -184,12 +187,12 @@ public class SheetManager : MonoBehaviour
     {
         float t = Time.timeSinceLevelLoad;
         float elapsed = 0;
-        Vector3 start = new Vector3(go.transform.localPosition.x, go.transform.localPosition.y, -10);
+        Vector3 start = go.transform.localPosition;
         Vector3 end = new Vector3(go.transform.localPosition.x, go.transform.localPosition.y, 0);
         while (elapsed < 1f)
         {
             go.transform.localPosition = Vector3.Lerp(start, end, elapsed);
-            elapsed = (Time.timeSinceLevelLoad - t) / (tempos[0].speed / AmountOfNotes); // hoeveelheid seconden berekenen
+            elapsed = (Time.timeSinceLevelLoad - t) / ((playSpeed / AmountOfNotes) + 7.5f); // hoeveelheid seconden berekenen
             yield return new WaitForEndOfFrame();
         }
 
@@ -198,7 +201,6 @@ public class SheetManager : MonoBehaviour
         else
             notesOnRightSheet.Remove(go);
         Destroy(go);
-        print(Time.timeSinceLevelLoad - t);
     }
 
     EasyValue GetKeyValueToEasyValue(int length)
@@ -206,12 +208,12 @@ public class SheetManager : MonoBehaviour
         EasyValue e = new EasyValue();
         if (length == 0)
         {
+            print(0);
             e.value = 0;
             return e;
         }
 
-        int thirtySecondNote;
-        thirtySecondNote = ticksPerQuarterNote / 8;
+        int thirtySecondNote = ticksPerQuarterNote / 8;
 
         for (float i = 1f / 32f; i < length; thirtySecondNote *= 2, i *= 2)
         {
@@ -239,6 +241,7 @@ public class SheetManager : MonoBehaviour
         locPos.y = SetY();
         locPos.z = SetZ(list);
 
+        print(locPos);
         list[list.Count - 1].transform.localPosition = locPos;
         yield return new WaitForEndOfFrame();
     }
@@ -280,7 +283,7 @@ public class SheetManager : MonoBehaviour
         {
             if (list[list.Count - 2].name[0] == 'T')
             {
-                z = 
+                z = list[list.Count - 2].transform.localPosition.z - distancePerQuarterNote * GetKeyValueToEasyValue(notesToPlay[1].length).value;
             }
             else
                 z = list[list.Count - 2].transform.localPosition.z - distancePerQuarterNote * GetKeyValueToEasyValue(notesToPlay[0].length).value;

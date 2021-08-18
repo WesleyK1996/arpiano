@@ -55,7 +55,7 @@ public class ShowKeys : MonoBehaviour
     {
         ShowKey(Resources.Load(Path.Combine("Materials", "Glow")) as Material, keyNumber);
     }
-    void ShowKey(string keyName)
+    public void ShowKey(string keyName)
     {
         ShowKey(Resources.Load(Path.Combine("Materials", "Glow")) as Material, keyName);
     }
@@ -83,7 +83,6 @@ public class ShowKeys : MonoBehaviour
                 key.transform.GetChild(0).GetComponent<Collider>().enabled = true;
                 key.transform.GetChild(0).GetComponent<Renderer>().material = Mat;
                 key.transform.GetChild(1).GetComponent<TextMeshPro>().enabled = true;
-
             }
         }
     }

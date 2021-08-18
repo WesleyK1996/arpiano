@@ -117,18 +117,22 @@ public class ReadClip : MonoBehaviour
             data = line.Split(' ');
             if (data[1] == "SetTempo")
             {
-                NoteInfo n = new NoteInfo();
-                n.note = "T";
-                n.startTick = int.Parse(data[0]);
-                n.speed = float.Parse(data[2].Replace("bpm", ""));
-                n.isLeft = false;
-                SheetManager.Instance.notesToPlay.Add(n);
-                //Tempo t = new Tempo()
-                //{
-                //    startick = int.Parse(data[0]),
-                //    speed = float.Parse(data[2].Replace("bpm", ""))
-                //};
-                //SheetManager.Instance.tempos.Add(t);
+                print("tempo");
+                if (SheetManager.Instance.playSpeed == 0)
+                {
+                    SheetManager.Instance.SetTempo(float.Parse(data[2].Replace("bpm", "")));
+                    print(float.Parse(data[2].Replace("bpm", "")));
+                    print(SheetManager.Instance.playSpeed);
+                }
+                else
+                {
+                    NoteInfo n = new NoteInfo();
+                    n.note = "T";
+                    n.startTick = int.Parse(data[0]);
+                    n.speed = float.Parse(data[2].Replace("bpm", ""));
+                    n.isLeft = false;
+                    SheetManager.Instance.notesToPlay.Add(n);
+                }
             }
             if (data[1] == "TimeSignature")
             {
